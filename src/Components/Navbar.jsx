@@ -6,8 +6,15 @@ import { FaHotjar } from "react-icons/fa";
 import { SlTarget } from "react-icons/sl";
 import { MdLocationOn } from "react-icons/md";
 import { IoIosCall } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
+    const [activeLink, setActiveLink] = useState("");
+
+    const handleLinkClick = (link) => {
+        setActiveLink(link);
+    };
 
   return (
     <div className='w-[85%] h-[70px] mx-auto'>
@@ -17,9 +24,9 @@ const Navbar = () => {
             </div> 
             <div>
                 <ul className='flex gap-12 font-bold text-lg'>
-                    <li className='cursor-pointer hover:text-red-600 text-gray-600'>HOME</li>
-                    <li className='cursor-pointer hover:text-red-600 text-gray-600'>ABOUT US</li>
-                    <li className='cursor-pointer hover:text-red-600 text-gray-600'>CONTACT US</li>
+                    <Link to='/' className={`cursor-pointer hover:text-red-600 text-gray-600`}>HOME</Link>
+                    <Link to='about-us' className='cursor-pointer hover:text-red-600 text-gray-600'>ABOUT US</Link>
+                    <Link to='contact-us' className='cursor-pointer hover:text-red-600 text-gray-600'>CONTACT US</Link>
                 </ul>
             </div>
             <div className='flex items-center gap-8'>
