@@ -6,27 +6,27 @@ import { FaHotjar } from "react-icons/fa";
 import { SlTarget } from "react-icons/sl";
 import { MdLocationOn } from "react-icons/md";
 import { IoIosCall } from "react-icons/io";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
 
-    const [activeLink, setActiveLink] = useState("");
+    const location = useLocation();
 
-    const handleLinkClick = (link) => {
-        setActiveLink(link);
+    const isActive = (path) => {
+        return location.pathname === path;
     };
 
   return (
-    <div className='w-[85%] h-[70px] mx-auto'>
-        <div className='flex justify-between items-center w-full h-full'>
+    <div className='w-[85%] mx-auto'>
+        <div className='flex justify-between items-center w-full h-[70px]'>
             <div>
                 <h1 className='text-4xl font-bold text-red-600 cursor-pointer'>SENƎX</h1>
             </div> 
             <div>
                 <ul className='flex gap-12 font-bold text-lg'>
-                    <Link to='/' className={`cursor-pointer hover:text-red-600 text-gray-600`}>HOME</Link>
-                    <Link to='about-us' className='cursor-pointer hover:text-red-600 text-gray-600'>ABOUT US</Link>
-                    <Link to='contact-us' className='cursor-pointer hover:text-red-600 text-gray-600'>CONTACT US</Link>
+                    <Link to='/' exact className={`cursor-pointer hover:text-red-600 text-gray-600 pl-2 ${isActive('/') ? "text-red-500 border-l-2 border-red-500" : "" }` } >HOME</Link>
+                    <Link to='/about-us' className={`cursor-pointer hover:text-red-600 text-gray-600 pl-2 ${isActive("/about-us") ? "text-red-500 border-l-2 border-red-500" : "" }` } >ABOUT US</Link>
+                    <Link to='/contact-us' className={`cursor-pointer hover:text-red-600 text-gray-600 pl-2 ${isActive("/contact-us") ? "text-red-500 border-l-2 border-red-500" : "" }` }>CONTACT US</Link>
                 </ul>
             </div>
             <div className='flex items-center gap-8'>

@@ -1,0 +1,56 @@
+import React, { useContext, useState } from 'react';
+import { Categories } from '../products';
+import { RiArrowDropRightLine } from "react-icons/ri";
+import { Link } from 'react-router-dom';
+import { SearchContext } from '../SearchContext';
+
+const Sidebar = () => {
+
+  const { clearSearchQuery } = useContext(SearchContext);
+
+  const handleCategoryClick = () => {
+    clearSearchQuery();
+  };
+
+  const [collapsedSections, setCollapsedSections] = useState({});
+
+  const toggleCollapse = (section) => {
+    setCollapsedSections((prev) => ({
+      ...prev,
+      [section]: !prev[section]
+    }));
+  };
+
+  return (
+    <div className='w-[250px] border-red-600 border ml-36 mt-4 h-[780px] overflow-y-scroll'>
+      <div className='w-full h-[50px] border bg-red-600 border-white'>
+        <h1 className='flex items-center justify-center text-white w-full h-full uppercase font-semibold text-lg'>Categories</h1>
+      </div>
+      <div className='my-4 ml-3 '>
+        <ul>
+          {Categories.map((category, index) => (
+            <li key={index}>
+              <h3 className='flex items-center cursor-pointer mt-1 mb-2 text-sm uppercase' onClick={() => toggleCollapse(category.category)}>
+                <RiArrowDropRightLine className='text-gray-500' size={25} /> {category.category}
+              </h3>
+              {collapsedSections[category.category] && (
+                <ul>
+                  {category.subCat.map((subCategory, subIndex) => (
+                    <li className='mb-2 uppercase ml-9 text-sm cursor-pointer' key={`${index}-${subIndex}`}>
+                      <Link onClick={handleCategoryClick} to={`/products/${subCategory.name}`}>
+                        {subCategory.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <hr />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Sidebar;
