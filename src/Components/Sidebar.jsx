@@ -31,7 +31,12 @@ const Sidebar = () => {
           {Categories.map((category, index) => (
             <li key={index}>
               <h3 className='flex items-center cursor-pointer mt-1 mb-2 text-sm uppercase' onClick={() => toggleCollapse(category.category)}>
-                <RiArrowDropRightLine className='text-gray-500' size={25} /> {category.category}
+              <RiArrowDropRightLine
+                className={`text-gray-500 transition-transform duration-200 ${
+                  collapsedSections[category.category] ? 'rotate-90' : ''
+                }`}
+                size={25}
+                />{' '} {category.category}
               </h3>
               {collapsedSections[category.category] && (
                 <ul>

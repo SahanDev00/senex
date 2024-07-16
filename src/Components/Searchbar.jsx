@@ -18,7 +18,7 @@ const Searchbar = ({ onSearch }) => {
 
   return (
     <div className='w-[89%] ml-6 mt-4 flex items-center h-[50px]'>
-      <form onSubmit={handleSubmit} className='w-full h-full flex'>
+      <form onSubmit={handleSubmit} className='w-full h-full flex '>
         <button type='submit' className='w-[50px] h-[50px] rounded-l-md bg-red-600 flex items-center hover:cursor-pointer'>
             <IoSearch size={25} className='mx-auto text-white' />
         </button>
@@ -27,7 +27,7 @@ const Searchbar = ({ onSearch }) => {
           placeholder='Search a product...'
           value={searchQuery}
           onChange={handleChange}
-          className='border w-full h-full pl-5 rounded-r-lg'
+          className='border w-full h-full pl-5 rounded-r-lg border-red-600'
         />
       </form>
     </div>

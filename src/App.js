@@ -14,7 +14,7 @@ function App() {
 
   return (
     <SearchProvider>
-      <div className="App">
+      <div className="App ">
         <Router>
           <Navbar/>
           <Routes>

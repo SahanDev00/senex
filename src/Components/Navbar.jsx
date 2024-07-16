@@ -42,9 +42,9 @@ const Navbar = () => {
             <div className='w-full h-full flex justify-between items-center'>
                 <div>
                     <ul className='flex gap-8 text-lg font-semibold'>
-                        <li className='cursor-pointer text-gray-600 hover:text-red-400 flex items-center gap-1'><FaHotjar/>Hot Deals</li>
-                        <li className='cursor-pointer text-gray-600 hover:text-red-400 flex items-center gap-1'><SlTarget/>Track Order</li>
-                        <li className='cursor-pointer text-gray-600 hover:text-red-400 flex items-center gap-1'><MdLocationOn/>Store Location</li>
+                        <li className='cursor-pointer text-gray-600 hover:text-red-400 flex items-center gap-1'><FaHotjar className='text-red-600'/>Hot Deals</li>
+                        <li className='cursor-pointer text-gray-600 hover:text-red-400 flex items-center gap-1'><SlTarget className='text-red-600'/>Track Order</li>
+                        <li className='cursor-pointer text-gray-600 hover:text-red-400 flex items-center gap-1'><MdLocationOn className='text-red-600'/>Store Location</li>
                     </ul>
                 </div>
                 <div>
