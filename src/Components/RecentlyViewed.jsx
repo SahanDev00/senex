@@ -30,7 +30,7 @@ const RecentlyViewed = () => {
         <div className='mt-5 w-full h-[370px] overflow-hidden'>
           <div className='flex items-center h-full overflow-x-scroll whitespace-nowrap'>
           {bestSellingItems.map((product, index) => (
-              <div key={index} className='w-[260px] h-[320px] rounded-xl mx-4 p-4 shadow hover:shadow-md border-2 flex-shrink-0'>
+              <div key={index} className='w-[260px] h-[320px] bg-white hover:scale-105 duration-300 rounded-xl mx-4 p-4 shadow hover:shadow-md border-2 flex-shrink-0'>
                 <img className='w-full h-40 object-cover mb-4 ' src={product.image} alt='' />
                 <h1 className='text-xl mt-2 font-semibold'>{product.name}</h1>
                 <p>{product.price}</p>

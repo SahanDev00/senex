@@ -7,19 +7,19 @@ import BestSelling from '../Components/BestSelling';
 import RecentlyViewed from '../Components/RecentlyViewed';
 import Features from '../Components/Features';
 
-const Home = () => {
+const Product = () => {
 
     const { setSearchQuery } = useContext(SearchContext);
 
   return (
     <div>
-      <div className="flex w-[99%] mx-auto">
-        <div className="hidden lg:block">
+      <div className="flex w-[99%] mx-auto ">
+        <div className="">
             <Sidebar />
         </div>
         <div className="flex-1 flex flex-col">
             <Searchbar onSearch={setSearchQuery} products={[]}/>
-            <div className=" w-[1340px] ml-6">
+            <div className="  ml-6">
                 <Outlet />
             </div>
         </div>
@@ -31,4 +31,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Product

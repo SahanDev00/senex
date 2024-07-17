@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import logo from "../Assets/logo.jpg"
 import { TiShoppingCart } from "react-icons/ti";
 import { FaUserLarge } from "react-icons/fa6";
 import { FaHotjar } from "react-icons/fa";
@@ -25,6 +24,7 @@ const Navbar = () => {
             <div>
                 <ul className='flex gap-12 font-bold text-lg'>
                     <Link to='/' exact className={`cursor-pointer hover:text-red-600 text-gray-600 pl-2 ${isActive('/') ? "text-red-500 border-l-2 border-red-500" : "" }` } >HOME</Link>
+                    <Link to='/product' exact className={`cursor-pointer hover:text-red-600 text-gray-600 pl-2 ${isActive('/product') ? "text-red-500 border-l-2 border-red-500" : "" }` } >PRODUCTS</Link>
                     <Link to='/about-us' className={`cursor-pointer hover:text-red-600 text-gray-600 pl-2 ${isActive("/about-us") ? "text-red-500 border-l-2 border-red-500" : "" }` } >ABOUT US</Link>
                     <Link to='/contact-us' className={`cursor-pointer hover:text-red-600 text-gray-600 pl-2 ${isActive("/contact-us") ? "text-red-500 border-l-2 border-red-500" : "" }` }>CONTACT US</Link>
                 </ul>
@@ -44,7 +44,7 @@ const Navbar = () => {
                     <ul className='flex gap-8 text-lg font-semibold'>
                         <li className='cursor-pointer text-gray-600 hover:text-red-400 flex items-center gap-1'><FaHotjar className='text-red-600'/>Hot Deals</li>
                         <li className='cursor-pointer text-gray-600 hover:text-red-400 flex items-center gap-1'><SlTarget className='text-red-600'/>Track Order</li>
-                        <li className='cursor-pointer text-gray-600 hover:text-red-400 flex items-center gap-1'><MdLocationOn className='text-red-600'/>Store Location</li>
+                        <Link to='/contact-us' className={`cursor-pointer text-gray-600 hover:text-red-400 flex items-center gap-1 ${isActive("/contact-us") ? "text-red-500 " : "" }`}><MdLocationOn className='text-red-600'/>Store Location</Link>
                     </ul>
                 </div>
                 <div>

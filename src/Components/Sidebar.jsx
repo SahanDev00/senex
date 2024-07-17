@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { SearchContext } from '../SearchContext';
 
 const Sidebar = () => {
-
   const { clearSearchQuery } = useContext(SearchContext);
 
   const handleCategoryClick = () => {
@@ -15,14 +14,20 @@ const Sidebar = () => {
   const [collapsedSections, setCollapsedSections] = useState({});
 
   const toggleCollapse = (section) => {
-    setCollapsedSections((prev) => ({
-      ...prev,
-      [section]: !prev[section]
-    }));
+    setCollapsedSections((prev) => {
+      const newSections = { ...prev };
+      for (const key in newSections) {
+        if (key !== section) {
+          newSections[key] = false;
+        }
+      }
+      newSections[section] = !newSections[section];
+      return newSections;
+    });
   };
 
   return (
-    <div className='w-[250px] border-red-600 border ml-36 mt-4 h-[780px] overflow-y-scroll'>
+    <div className='w-[250px] border-red-600 border ml-36 mt-4 h-[780px] overflow-y-scroll bg-white'>
       <div className='w-full h-[50px] border bg-red-600 border-white'>
         <h1 className='flex items-center justify-center text-white w-full h-full uppercase font-semibold text-lg'>Categories</h1>
       </div>
@@ -31,18 +36,18 @@ const Sidebar = () => {
           {Categories.map((category, index) => (
             <li key={index}>
               <h3 className='flex items-center cursor-pointer mt-1 mb-2 text-sm uppercase' onClick={() => toggleCollapse(category.category)}>
-              <RiArrowDropRightLine
-                className={`text-gray-500 transition-transform duration-200 ${
-                  collapsedSections[category.category] ? 'rotate-90' : ''
-                }`}
-                size={25}
+                <RiArrowDropRightLine
+                  className={`text-gray-500 transition-transform duration-200 ${
+                    collapsedSections[category.category] ? 'rotate-90' : ''
+                  }`}
+                  size={25}
                 />{' '} {category.category}
               </h3>
               {collapsedSections[category.category] && (
                 <ul>
                   {category.subCat.map((subCategory, subIndex) => (
                     <li className='mb-2 uppercase ml-9 text-sm cursor-pointer' key={`${index}-${subIndex}`}>
-                      <Link onClick={handleCategoryClick} to={`/products/${subCategory.name}`}>
+                      <Link onClick={handleCategoryClick} to={`/product/products/${subCategory.name}`}>
                         {subCategory.name}
                       </Link>
                     </li>

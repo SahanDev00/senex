@@ -404,6 +404,10 @@ export const Categories = [
             { id: 8, name: 'Asus laptop 8', price: '$1200', image: laptop },
             { id: 9, name: 'Asus laptop 9', price: '$1200', image: laptop },
             { id: 10, name: 'Asus laptop 10', price: '$1200', image: laptop },
+            { id: 11, name: 'Asus laptop 11', price: '$4200', image: laptop },
+            { id: 12, name: 'Asus laptop 12', price: '$1200', image: laptop },
+            { id: 13, name: 'Asus laptop 13', price: '$1200', image: laptop },
+            { id: 14, name: 'Asus laptop 14', price: '$1200', image: laptop },
           ]
         },
         {

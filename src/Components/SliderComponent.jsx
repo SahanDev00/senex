@@ -43,7 +43,7 @@ const SliderComponent = () => {
   };
 
   return (
-    <div className='mt-5 h-[400px] border rounded-lg cursor-grab active:cursor-grabbing'>
+    <div className='mt-5 w-[1330px] h-[400px] border rounded-lg cursor-grab active:cursor-grabbing'>
       <Slider {...settings} className='w-full h-[400px]'>
           {details.map((detail, index) => (
             <div key={index}>
