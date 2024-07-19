@@ -13,7 +13,7 @@ const Product = () => {
 
   return (
     <div>
-      <div className="flex w-[99%] mx-auto ">
+      <div className="flex w-[99%] mx-auto mb-14 relative">
         <div className="">
             <Sidebar />
         </div>

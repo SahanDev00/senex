@@ -33,3 +33,19 @@
     opacity: 1 !important;
     animation: floatToRight 1s ease-out forwards;
   }
+
+@keyframes floatToLeft {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(80px);
+      opacity: 0;
+    }
+  }
+  
+  .float-to-left {
+    opacity: 1 !important;
+    animation: floatToLeft 1s ease-out forwards;
+  }

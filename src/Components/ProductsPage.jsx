@@ -1,11 +1,16 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { Categories } from '../products';
 import { SearchContext } from '../SearchContext';
+import ProductDescription from './ProductDescription';
+import { CartContext } from '../Components/CartContext'; // Import CartContext
 
 const ProductsPage = () => {
   const { searchQuery, clearSearchQuery } = useContext(SearchContext);
   const { subCategoryName } = useParams();
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [notification, setNotification] = useState(''); // State for notification message
+  const { addToCart } = useContext(CartContext); // Use CartContext
 
   // Clear the search query when navigating to a new category
   useEffect(() => {
@@ -41,19 +46,39 @@ const ProductsPage = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top on page change
   };
 
+  const handleAddToCart = (product) => {
+    addToCart(product); // Add product to cart
+
+    // Show notification message
+    setNotification(`${product.name} has been added to the cart.`);
+
+    // Hide notification message after 3 seconds
+    setTimeout(() => {
+      setNotification('');
+    }, 3000);
+  };
+
   return (
-    <div className="w-[91%] p-4">
-      <h1 className="text-2xl font-bold mb-3">{subCategoryName} Products</h1>
+    <div className="w-[91%] p-4 relative">
+      <h1 className="text-2xl text-white font-bold mb-3">{subCategoryName} Products</h1>
       {products.length > 0 ? (
         <div>
-          <p className="mb-2">{products.length} products found</p>
+          <p className="mb-2 text-white">{products.length} products found</p>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {currentProducts.map((product) => (
-              <div key={product.id} className="border bg-white hover:scale-105 duration-300 m-1 p-5 rounded hover:shadow-lg shadow">
+              <div key={product.id} className="border bg-white hover:scale-105 duration-300 m-1 p-5 rounded hover:shadow-lg shadow cursor-pointer" onClick={() => setSelectedProduct(product)}>
                 <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4" />
                 <h2 className="text-xl font-semibold">{product.name}</h2>
-                <p className="text-gray-600">{product.price}</p>
-                <button className="mt-2 bg-blue-500 text-white py-2 px-4 rounded">Add to Cart</button>
+                <p className="text-gray-600">${Number(product.price).toFixed(2)}</p> {/* Ensure price is formatted */}
+                <button
+                  className="mt-2 bg-blue-500 text-white py-2 px-4 rounded"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent the modal from opening
+                    handleAddToCart(product); // Add product to cart
+                  }}
+                >
+                  Add to Cart
+                </button>
               </div>
             ))}
           </div>
@@ -70,7 +95,29 @@ const ProductsPage = () => {
           </div>
         </div>
       ) : (
-        <p>0 products found</p>
+        <p className='text-white'>0 products found</p>
+      )}
+
+      {/* Notification message */}
+      {notification && (
+        <div className="fixed bottom-4 right-4 bg-green-500 text-white py-2 px-4 rounded shadow-lg z-50">
+          {notification}
+        </div>
+      )}
+
+      {/* Modal for Product Description */}
+      {selectedProduct && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white rounded-lg p-8 w-3/4 max-w-4xl relative">
+            <button
+              className="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
+              onClick={() => setSelectedProduct(null)}
+            >
+              &times;
+            </button>
+            <ProductDescription product={selectedProduct} />
+          </div>
+        </div>
       )}
     </div>
   );

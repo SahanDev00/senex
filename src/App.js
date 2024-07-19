@@ -1,6 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from "./Components/Navbar";
-import Home from './Pages/Product';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import ProductsPage from './Components/ProductsPage';
@@ -9,33 +8,61 @@ import { SearchProvider } from './SearchContext';
 import SliderComponent from './Components/SliderComponent';
 import Cards from './Components/Cards';
 import Footer from './Components/Footer';
-import HomeMain from './Pages/HomeMain';
+import Home from './Pages/Home';
 import Product from './Pages/Product';
+import bgPic from "./Assets/Images/background1.jpg"
+import bgPic2 from "./Assets/Images/Background2.jpg"
+import bgPic3 from "./Assets/Images/farcry.jpg"
+import Login from './Pages/Login';
+import ProductDescription from './Components/ProductDescription';
+import Cart from './Components/Cart';
+import { CartProvider } from './Components/CartContext';
 
 
-function App() {
+function BackgroundImages() {
+  const location = useLocation();
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
   return (
+    <div className='absolute opacity-25'>
+      <img className='' src={bgPic} alt="background" />
+      <img className={`${isActive('/about-us') || isActive('/contact-us') || isActive('/login') || isActive('/cart') ? 'hidden' : ''}`} src={bgPic2} alt="background2" />
+      <img className={`${isActive('/') ? '' : 'hidden'}`} src={bgPic3} alt="background2" />
+    </div>
+  );
+}
+
+function App() {
+  return (
     <SearchProvider>
-      <div className="App ">
-        <Router>
-          <Navbar/>
-          <Routes>
-            <Route index path="/" element={<HomeMain/>}/>
-            <Route path="/product" element={<Product/>}>
-            <Route path='/product' element={<>
-              <SliderComponent />
-              <Cards />
-              </>} />
-              <Route path="/product/products/:subCategoryName" element={<ProductsPage />} />
-              <Route path="search" element={<SearchResults />} />
-            </Route>
-            <Route path="/about-us" element={<About/>} />
-            <Route path="/contact-us" element={<Contact/>} />
-          </Routes>
-          <Footer/>
-        </Router>
-      </div>
+      <CartProvider>
+        <div className="App bg-black">
+          <Router>
+            <BackgroundImages/>
+            <Navbar/>
+            <Routes>
+              <Route index path="/" element={<Home/>}/>
+              <Route path="/product" element={<Product/>}>
+              <Route path='/product' element={<>
+                <SliderComponent />
+                <Cards />
+                </>} />
+                <Route path="/product/:productId" element={<ProductDescription />} />
+                <Route path="/product/products/:subCategoryName" element={<ProductsPage />} />
+                <Route path="search" element={<SearchResults />} />
+              </Route>
+              <Route path="/about-us" element={<About/>} />
+              <Route path="/contact-us" element={<Contact/>} />
+              <Route path="/login" element={<Login/>} />
+              <Route path="/cart" element={<Cart/>} />
+            </Routes>
+            <Footer/>
+          </Router>
+        </div>
+      </CartProvider>
     </SearchProvider>
   );
 }

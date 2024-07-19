@@ -11,22 +11,22 @@ export const Categories = [
         {
           name: 'Asus',
           products: [
-            { id: 1, name: 'Asus Laptop 1', price: '$1000', image: computer },
-            { id: 2, name: 'Asus Laptop 2', price: '$1200', image: computer }
+            { id: 1, name: 'Asus Laptop 1', price: '1000', image: computer },
+            { id: 2, name: 'Asus Laptop 2', price: '1200', image: computer, description: "sbfasbfiuhaf ehfiwiqf ihahewfiahifh ihaifhiahfihai ahfiahfiaihfi iafiwhaih" }
           ]
         },
         {
           name: 'Dell',
           products: [
-            { id: 3, name: 'Dell Laptop 1', price: '$900', image: computer },
-            { id: 4, name: 'Dell Laptop 2', price: '$1100', image: computer }
+            { id: 3, name: 'Dell Laptop 1', price: '900', image: computer },
+            { id: 4, name: 'Dell Laptop 2', price: '1100', image: computer }
           ]
         },
         {
           name: 'Tuf',
           products: [
-            { id: 5, name: 'Tuf Laptop 1', price: '$950', image: computer },
-            { id: 6, name: 'Tuf Laptop 2', price: '$1150', image: computer }
+            { id: 5, name: 'Tuf Laptop 1', price: '950', image: computer },
+            { id: 6, name: 'Tuf Laptop 2', price: '1150', image: computer }
           ]
         }
       ]
@@ -37,22 +37,22 @@ export const Categories = [
         {
           name: 'Asus',
           products: [
-            { id: 1, name: 'Asus Laptop 1', price: '$1000', image: computer },
-            { id: 2, name: 'Asus Laptop 2', price: '$1200', image: computer }
+            { id: 1, name: 'Asus Laptop 1', price: '1000', image: computer },
+            { id: 2, name: 'Asus Laptop 2', price: '1200', image: computer }
           ]
         },
         {
           name: 'Dell',
           products: [
-            { id: 3, name: 'Dell Laptop 1', price: '$900', image: computer },
-            { id: 4, name: 'Dell Laptop 2', price: '$1100', image: computer }
+            { id: 3, name: 'Dell Laptop 1', price: '900', image: computer },
+            { id: 4, name: 'Dell Laptop 2', price: '1100', image: computer }
           ]
         },
         {
           name: 'Tuf',
           products: [
-            { id: 5, name: 'Tuf Laptop 1', price: '$950', image: computer },
-            { id: 6, name: 'Tuf Laptop 2', price: '$1150', image: computer }
+            { id: 5, name: 'Tuf Laptop 1', price: '950', image: computer },
+            { id: 6, name: 'Tuf Laptop 2', price: '1150', image: computer }
           ]
         }
       ]
@@ -63,22 +63,22 @@ export const Categories = [
         {
           name: 'Asus',
           products: [
-            { id: 1, name: 'Asus Laptop 1', price: '$1000', image: computer },
-            { id: 2, name: 'Asus Laptop 2', price: '$1200', image: computer }
+            { id: 1, name: 'Asus Laptop 1', price: '1000', image: computer },
+            { id: 2, name: 'Asus Laptop 2', price: '1200', image: computer }
           ]
         },
         {
           name: 'Dell',
           products: [
-            { id: 3, name: 'Dell Laptop 1', price: '$900', image: computer },
-            { id: 4, name: 'Dell Laptop 2', price: '$1100', image: computer }
+            { id: 3, name: 'Dell Laptop 1', price: '900', image: computer },
+            { id: 4, name: 'Dell Laptop 2', price: '1100', image: computer }
           ]
         },
         {
           name: 'Tuf',
           products: [
-            { id: 5, name: 'Tuf Laptop 1', price: '$950', image: computer },
-            { id: 6, name: 'Tuf Laptop 2', price: '$1150', image: computer }
+            { id: 5, name: 'Tuf Laptop 1', price: '950', image: computer },
+            { id: 6, name: 'Tuf Laptop 2', price: '1150', image: computer }
           ]
         }
       ]
@@ -89,22 +89,22 @@ export const Categories = [
         {
           name: 'Asus',
           products: [
-            { id: 1, name: 'Asus Laptop 1', price: '$1000', image: computer },
-            { id: 2, name: 'Asus Laptop 2', price: '$1200', image: computer }
+            { id: 1, name: 'Asus Laptop 1', price: '1000', image: computer },
+            { id: 2, name: 'Asus Laptop 2', price: '1200', image: computer }
           ]
         },
         {
           name: 'Dell',
           products: [
-            { id: 3, name: 'Dell Laptop 1', price: '$900', image: computer },
-            { id: 4, name: 'Dell Laptop 2', price: '$1100', image: computer }
+            { id: 3, name: 'Dell Laptop 1', price: '900', image: computer },
+            { id: 4, name: 'Dell Laptop 2', price: '1100', image: computer }
           ]
         },
         {
           name: 'Tuf',
           products: [
-            { id: 5, name: 'Tuf Laptop 1', price: '$950', image: computer },
-            { id: 6, name: 'Tuf Laptop 2', price: '$1150', image: computer }
+            { id: 5, name: 'Tuf Laptop 1', price: '950', image: computer },
+            { id: 6, name: 'Tuf Laptop 2', price: '1150', image: computer }
           ]
         }
       ]
@@ -115,22 +115,22 @@ export const Categories = [
         {
           name: 'Asus',
           products: [
-            { id: 1, name: 'Asus Laptop 1', price: '$1000', image: computer },
-            { id: 2, name: 'Asus Laptop 2', price: '$1200', image: computer }
+            { id: 1, name: 'Asus Laptop 1', price: '1000', image: computer },
+            { id: 2, name: 'Asus Laptop 2', price: '1200', image: computer }
           ]
         },
         {
           name: 'Dell',
           products: [
-            { id: 3, name: 'Dell Laptop 1', price: '$900', image: computer },
-            { id: 4, name: 'Dell Laptop 2', price: '$1100', image: computer }
+            { id: 3, name: 'Dell Laptop 1', price: '900', image: computer },
+            { id: 4, name: 'Dell Laptop 2', price: '1100', image: computer }
           ]
         },
         {
           name: 'Tuf',
           products: [
-            { id: 5, name: 'Tuf Laptop 1', price: '$950', image: computer },
-            { id: 6, name: 'Tuf Laptop 2', price: '$1150', image: computer }
+            { id: 5, name: 'Tuf Laptop 1', price: '950', image: computer },
+            { id: 6, name: 'Tuf Laptop 2', price: '1150', image: computer }
           ]
         }
       ]
@@ -141,8 +141,8 @@ export const Categories = [
         {
           name: 'Asus',
           products: [
-            { id: 1, name: 'Asus Monitor 1', price: '$1000', image: monitor },
-            { id: 2, name: 'Asus Monitor 2', price: '$1200', image: monitor }
+            { id: 1, name: 'Asus Monitor 1', price: '1000', image: monitor },
+            { id: 2, name: 'Asus Monitor 2', price: '1200', image: monitor }
           ]
         },
         {

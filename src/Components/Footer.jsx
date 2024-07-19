@@ -6,32 +6,32 @@ import paymentPic from "../Assets/Images/payment.png"
 
 const Footer = () => {
   return (
-    <div className='w-full h-[400px] bg-red-600 '>
+    <div className='w-full h-[400px] relative bg-red-600 '>
       <div className='w-[85%] h-full mx-auto flex justify-between related'>
         <div className='grid grid-cols-3 mt-14'>
           <div className=''>
-            <h1 className='text-xl text-white font-semibold mb-2'>Information</h1>
-            <p className='mb-2 text-gray-200 cursor-pointer hover:text-white'>About us</p>
-            <p className='mb-2 text-gray-200 cursor-pointer hover:text-white'>Contact us</p>
-            <p className='mb-2 text-gray-200 cursor-pointer hover:text-white'>Return Policies</p>
-            <p className='mb-2 text-gray-200 cursor-pointer hover:text-white'>Privacy Policies</p>
-            <p className='mb-2 text-gray-200 cursor-pointer hover:text-white'>Terms & Condition</p>
+            <h1 className='text-xl text-white font-semibold mb-3'>Information</h1>
+            <p className='mb-1 text-gray-200 cursor-pointer hover:text-white'>About us</p>
+            <p className='mb-1 text-gray-200 cursor-pointer hover:text-white'>Contact us</p>
+            <p className='mb-1 text-gray-200 cursor-pointer hover:text-white'>Return Policies</p>
+            <p className='mb-1 text-gray-200 cursor-pointer hover:text-white'>Privacy Policies</p>
+            <p className='mb-1 text-gray-200 cursor-pointer hover:text-white'>Terms & Condition</p>
           </div>
           <div className=''>
-            <h1 className='text-xl text-white font-semibold mb-2'>Contact Info</h1>
-            <p className='mb-2 text-gray-200'>Hotline: +94777300288</p>
-            <p className='mb-2 text-gray-200'>Showroom: +94114468500</p>
-            <p className='mb-2 text-gray-200'>Workshop: +94114673950</p>
-            <p className='mb-2 text-gray-200'>Workshop: +94114199941</p>
-            <p className='mb-2 text-gray-200'>Email: msds.net@live.com</p>
+            <h1 className='text-xl text-white font-semibold mb-3'>Contact Info</h1>
+            <p className='mb-1 text-gray-200'>Hotline: +94777300288</p>
+            <p className='mb-1 text-gray-200'>Showroom: +94114468500</p>
+            <p className='mb-1 text-gray-200'>Workshop: +94114673950</p>
+            <p className='mb-1 text-gray-200'>Workshop: +94114199941</p>
+            <p className='mb-1 text-gray-200'>Email: msds.net@live.com</p>
           </div>
           <div className=''>
-            <h1 className='text-xl text-white font-semibold mb-2'>Address</h1>
-            <p className='mb-2 text-gray-200'>Microsis Computers</p>
-            <p className='mb-2 text-gray-200'>No 29 UC Shipping Complex <br/>Ja-Ela 11350<br/>Sri Lanka</p>
-            <p className='mb-2 text-gray-200'>WORKING DAYS / HOURS: MON - SUN / <br/>9:00 AM - 8.00 PM</p>
+            <h1 className='text-xl text-white font-semibold mb-3'>Address</h1>
+            <p className='mb-1 text-gray-200'>Microsis Computers</p>
+            <p className='mb-1 text-gray-200'>No 29 UC Shipping Complex <br/>Ja-Ela 11350<br/>Sri Lanka</p>
+            <p className='mb-1 text-gray-200'>WORKING DAYS / HOURS: MON - SUN / <br/>9:00 AM - 8.00 PM</p>
           </div>
-          <div className='absolute mt-64 text-white'>
+          <div className='absolute mt-64 text-gray-200'>
             <p>The best place to buy Laptops, Computers & Accessories. Personal Computers, Laptop Computers, <br/>Computer Accessories, Network Products, Repairs</p>
           </div>
         </div>
@@ -62,14 +62,14 @@ const Footer = () => {
               </div>
             </div>
             <div className='flex gap-7 mt-10'>
-                <FaFacebook size={35} className='rounded-full bg-white p-1 text-blue-600 hover:scale-105 cursor-pointer'/>
-                <FaGoogle size={35} className='rounded-full bg-white p-1 text-black hover:scale-105 cursor-pointer'/>
-                <FaInstagram size={35} className='rounded-full bg-white p-1 text-red-600 hover:scale-105 cursor-pointer'/>
+                <FaFacebook size={35} className='rounded-full bg-gray-50 text-red-600 p-1 hover:text-black hover:scale-105 cursor-pointer'/>
+                <FaGoogle size={35} className='rounded-full bg-gray-50 text-red-600 p-1 hover:text-black  hover:scale-105 cursor-pointer'/>
+                <FaInstagram size={35} className='rounded-full bg-gray-50 text-red-600 p-1 hover:text-black hover:scale-105 cursor-pointer'/>
             </div>
           </div>
         </div>
       </div>
-      <div className='w-full h-[70px] border-red-600 border-2'>
+      <div className='w-full h-[70px] bg-white border-red-600 border-2'>
         <div className='w-[80%] h-full flex mx-auto items-center justify-between'> 
           <h1 className='text-4xl font-bold text-red-600 cursor-pointer'>SENƎX</h1>
           <p>Copyright © <span className='font-semibold'>Exesmart</span> - All rights Reserved</p>
