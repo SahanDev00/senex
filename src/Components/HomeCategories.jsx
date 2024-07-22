@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const HomeCategories = () => {
   return (
-    <div className='w-[95%] h-[510px] relative border-2 border-red-500 rounded-xl mx-auto flex '>
+    <div className='w-[95%] h-[510px] relative  border-red-500 rounded-xl mx-auto flex '>
         <div className='w-full'>
             <p className='flex justify-center uppercase text-sm font-semibold text-white mt-5'>Products</p>
             <h1 className='text-4xl flex justify-center text-white font-bold'>SHOP BY CATEGORY</h1>

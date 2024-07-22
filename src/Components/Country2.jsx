@@ -1,7 +1,7 @@
 import React from 'react';
 
 // List of country names
-const countries = [
+const countries2 = [
   "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
   "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan",
   "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde",
@@ -27,15 +27,14 @@ const countries = [
 const CountryDropdown = () => {
   return (
     <div>
-      <label className='font-semibold text-sm' htmlFor="country">Country</label>
       <select 
         id="country" 
         name="country" 
-        className='block w-full cursor-pointer mx-auto rounded-lg pl-3 py-1 border-red-500 border-2 mb-2 mt-1' 
+        className='w-[316px] cursor-pointer h-12 mx-auto rounded-lg pl-3 py-1 border-red-500 border-2 mb-2 mt-1' 
         required
       >
         <option value="" disabled selected>Select your country</option>
-        {countries.map((country, index) => (
+        {countries2.map((country, index) => (
           <option key={index} value={country}>{country}</option>
         ))}
       </select>

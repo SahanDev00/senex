@@ -28,16 +28,19 @@ const Navbar = () => {
                     <div className='flex items-center gap-5'>
                         <Link to='/cart'>
                             <div className='relative'>
-                                <TiShoppingCart className={`hover:text-red-600 cursor-pointer ${isActive('/cart') ? 'text-red-500' : 'text-white'}`} size={35}/>
+                                <TiShoppingCart className={`hover:text-red-600 cursor-pointer ${isActive('/cart') || isActive('/checkout') ? 'text-red-500' : 'text-white'}`} size={35}/>
                                 {getTotalItems() > 0 && (
-                                    <p className={`absolute -top-3 -right-2 font-semibold rounded-full p-1 px-2 text-xs ${isActive('/cart') ? 'bg-white text-red-600' : 'bg-red-600 text-white'}`}>
+                                    <p className={`absolute -top-3 -right-2 font-semibold rounded-full p-1 px-2 text-xs ${isActive('/cart') || isActive('/checkout') ? 'bg-white text-red-600' : 'bg-red-600 text-white'}`}>
                                         {getTotalItems()}
                                     </p>
                                 )}
                             </div>
                         </Link>
-                        <Link to='/login'>
+                        {/*<Link to='/login'>
                             <FaUserLarge className={`hover:text-red-600 cursor-pointer ${isActive('/login') ? 'text-red-500' : 'text-white'}`} size={25}/>
+                        </Link> */}
+                        <Link to='/profile'>
+                            <FaUserLarge className={`hover:text-red-600 cursor-pointer ${isActive('/profile') ? 'text-red-500' : 'text-white'}`} size={25}/>
                         </Link>
                     </div>
                 </div>

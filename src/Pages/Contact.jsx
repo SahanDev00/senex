@@ -24,9 +24,9 @@ const Contact = () => {
       </div>
 
       {/* Contact Us */}
-      <div className='w-full h-full'>
+      {/*<div className='w-full h-full'>
         <img src={farcry} alt="" className='absolute opacity-40'/>
-      </div>
+      </div>*/}
       <div className=' h-full w-full relative mb-10 grid justify-center grid-cols-1 md:grid-cols-2 mt-16'>
         {/* Form */}
         <div className='border-r-2'>

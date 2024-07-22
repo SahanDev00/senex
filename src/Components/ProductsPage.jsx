@@ -66,12 +66,12 @@ const ProductsPage = () => {
           <p className="mb-2 text-white">{products.length} products found</p>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {currentProducts.map((product) => (
-              <div key={product.id} className="border bg-white hover:scale-105 duration-300 m-1 p-5 rounded hover:shadow-lg shadow cursor-pointer" onClick={() => setSelectedProduct(product)}>
+              <div key={product.id} className="border hover:scale-105 duration-300 m-1 p-5 rounded hover:shadow-lg shadow cursor-pointer" onClick={() => setSelectedProduct(product)}>
                 <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4" />
-                <h2 className="text-xl font-semibold">{product.name}</h2>
-                <p className="text-gray-600">${Number(product.price).toFixed(2)}</p> {/* Ensure price is formatted */}
+                <h2 className="text-xl text-white text-center font-semibold">{product.name}</h2>
+                <p className="text-white text-center ">${Number(product.price).toFixed(2)}</p> {/* Ensure price is formatted */}
                 <button
-                  className="mt-2 bg-blue-500 text-white py-2 px-4 rounded"
+                  className="mt-2 bg-red-500 flex mx-auto text-white py-2 px-4 rounded"
                   onClick={(e) => {
                     e.stopPropagation(); // Prevent the modal from opening
                     handleAddToCart(product); // Add product to cart

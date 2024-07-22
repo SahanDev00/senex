@@ -9,128 +9,66 @@ export const Categories = [
       category: 'Computers',
       subCat: [
         {
-          name: 'Asus',
+          name: 'Asus1',
           products: [
-            { id: 1, name: 'Asus Laptop 1', price: '1000', image: computer },
-            { id: 2, name: 'Asus Laptop 2', price: '1200', image: computer, description: "sbfasbfiuhaf ehfiwiqf ihahewfiahifh ihaifhiahfihai ahfiahfiaihfi iafiwhaih" }
+            { 
+              id: 1, 
+              name: 'Asus Laptop 1', 
+              price: '1000', 
+              image: computer,
+              description: "High-performance laptop with an Intel i7 processor, 16GB RAM, and 512GB SSD.",
+              specs: "Intel i7, 16GB RAM, 512GB SSD, 15.6-inch display"
+            },
+            { 
+              id: 2, 
+              name: 'Asus Laptop 2', 
+              price: '1200', 
+              image: computer,
+              description: "Premium laptop for gaming and productivity. Features RGB keyboard and NVIDIA GTX 1660.",
+              specs: "Intel i7, 16GB RAM, 1TB SSD, NVIDIA GTX 1660, 17.3-inch display"
+            }
           ]
         },
         {
           name: 'Dell',
           products: [
-            { id: 3, name: 'Dell Laptop 1', price: '900', image: computer },
-            { id: 4, name: 'Dell Laptop 2', price: '1100', image: computer }
+            { 
+              id: 3, 
+              name: 'Dell Laptop 1', 
+              price: '900', 
+              image: computer,
+              description: "Reliable laptop with Intel i5 processor, suitable for everyday tasks.",
+              specs: "Intel i5, 8GB RAM, 256GB SSD, 14-inch display"
+            },
+            { 
+              id: 4, 
+              name: 'Dell Laptop 2', 
+              price: '1100', 
+              image: computer,
+              description: "Powerful Dell laptop with a sleek design and long battery life.",
+              specs: "Intel i7, 16GB RAM, 512GB SSD, 15.6-inch display, Backlit keyboard"
+            }
           ]
         },
         {
           name: 'Tuf',
           products: [
-            { id: 5, name: 'Tuf Laptop 1', price: '950', image: computer },
-            { id: 6, name: 'Tuf Laptop 2', price: '1150', image: computer }
-          ]
-        }
-      ]
-    },
-    {
-      category: 'Computers2',
-      subCat: [
-        {
-          name: 'Asus',
-          products: [
-            { id: 1, name: 'Asus Laptop 1', price: '1000', image: computer },
-            { id: 2, name: 'Asus Laptop 2', price: '1200', image: computer }
-          ]
-        },
-        {
-          name: 'Dell',
-          products: [
-            { id: 3, name: 'Dell Laptop 1', price: '900', image: computer },
-            { id: 4, name: 'Dell Laptop 2', price: '1100', image: computer }
-          ]
-        },
-        {
-          name: 'Tuf',
-          products: [
-            { id: 5, name: 'Tuf Laptop 1', price: '950', image: computer },
-            { id: 6, name: 'Tuf Laptop 2', price: '1150', image: computer }
-          ]
-        }
-      ]
-    },
-    {
-      category: 'Computers3',
-      subCat: [
-        {
-          name: 'Asus',
-          products: [
-            { id: 1, name: 'Asus Laptop 1', price: '1000', image: computer },
-            { id: 2, name: 'Asus Laptop 2', price: '1200', image: computer }
-          ]
-        },
-        {
-          name: 'Dell',
-          products: [
-            { id: 3, name: 'Dell Laptop 1', price: '900', image: computer },
-            { id: 4, name: 'Dell Laptop 2', price: '1100', image: computer }
-          ]
-        },
-        {
-          name: 'Tuf',
-          products: [
-            { id: 5, name: 'Tuf Laptop 1', price: '950', image: computer },
-            { id: 6, name: 'Tuf Laptop 2', price: '1150', image: computer }
-          ]
-        }
-      ]
-    },
-    {
-      category: 'Computers4',
-      subCat: [
-        {
-          name: 'Asus',
-          products: [
-            { id: 1, name: 'Asus Laptop 1', price: '1000', image: computer },
-            { id: 2, name: 'Asus Laptop 2', price: '1200', image: computer }
-          ]
-        },
-        {
-          name: 'Dell',
-          products: [
-            { id: 3, name: 'Dell Laptop 1', price: '900', image: computer },
-            { id: 4, name: 'Dell Laptop 2', price: '1100', image: computer }
-          ]
-        },
-        {
-          name: 'Tuf',
-          products: [
-            { id: 5, name: 'Tuf Laptop 1', price: '950', image: computer },
-            { id: 6, name: 'Tuf Laptop 2', price: '1150', image: computer }
-          ]
-        }
-      ]
-    },
-    {
-      category: 'Computers5',
-      subCat: [
-        {
-          name: 'Asus',
-          products: [
-            { id: 1, name: 'Asus Laptop 1', price: '1000', image: computer },
-            { id: 2, name: 'Asus Laptop 2', price: '1200', image: computer }
-          ]
-        },
-        {
-          name: 'Dell',
-          products: [
-            { id: 3, name: 'Dell Laptop 1', price: '900', image: computer },
-            { id: 4, name: 'Dell Laptop 2', price: '1100', image: computer }
-          ]
-        },
-        {
-          name: 'Tuf',
-          products: [
-            { id: 5, name: 'Tuf Laptop 1', price: '950', image: computer },
-            { id: 6, name: 'Tuf Laptop 2', price: '1150', image: computer }
+            { 
+              id: 5, 
+              name: 'Tuf Laptop 1', 
+              price: '950', 
+              image: computer,
+              description: "Durable laptop built for high performance in demanding environments.",
+              specs: "AMD Ryzen 5, 16GB RAM, 512GB SSD, 15.6-inch display"
+            },
+            { 
+              id: 6, 
+              name: 'Tuf Laptop 2', 
+              price: '1150', 
+              image: computer,
+              description: "Robust laptop with military-grade toughness and excellent cooling.",
+              specs: "AMD Ryzen 7, 16GB RAM, 1TB SSD, NVIDIA GTX 1650, 17.3-inch display"
+            }
           ]
         }
       ]
@@ -141,74 +79,64 @@ export const Categories = [
         {
           name: 'Asus',
           products: [
-            { id: 1, name: 'Asus Monitor 1', price: '1000', image: monitor },
-            { id: 2, name: 'Asus Monitor 2', price: '1200', image: monitor }
+            { 
+              id: 10, 
+              name: 'Asus Monitor 1', 
+              price: '1000', 
+              image: monitor,
+              description: "High-resolution monitor with stunning visuals and a wide color gamut.",
+              specs: "27-inch, 4K UHD, 144Hz, IPS panel"
+            },
+            { 
+              id: 2, 
+              name: 'Asus Monitor 2', 
+              price: '1200', 
+              image: monitor,
+              description: "Curved gaming monitor with fast refresh rates and adaptive sync technology.",
+              specs: "32-inch, QHD, 165Hz, Curved, G-Sync"
+            }
           ]
         },
         {
           name: 'Dell',
           products: [
-            { id: 3, name: 'Dell Monitor 1', price: '$900', image: monitor },
-            { id: 4, name: 'Dell Monitor 2', price: '$1100', image: monitor }
+            { 
+              id: 3, 
+              name: 'Dell Monitor 1', 
+              price: '900', 
+              image: monitor,
+              description: "Reliable monitor with excellent color accuracy and energy-efficient design.",
+              specs: "24-inch, FHD, 60Hz, IPS panel"
+            },
+            { 
+              id: 4, 
+              name: 'Dell Monitor 2', 
+              price: '1100', 
+              image: monitor,
+              description: "UltraSharp monitor with InfinityEdge for a virtually borderless display.",
+              specs: "27-inch, QHD, 75Hz, IPS panel, InfinityEdge"
+            }
           ]
         },
         {
           name: 'Tuf',
           products: [
-            { id: 5, name: 'Tuf Monitor 1', price: '$950', image: monitor },
-            { id: 6, name: 'Tuf Monitor 2', price: '$1150', image: monitor }
-          ]
-        }
-      ]
-    },
-    {
-      category: 'Monitors2',
-      subCat: [
-        {
-          name: 'Asus',
-          products: [
-            { id: 1, name: 'Asus Monitor 1', price: '$1000', image: monitor },
-            { id: 2, name: 'Asus Monitor 2', price: '$1200', image: monitor }
-          ]
-        },
-        {
-          name: 'Dell',
-          products: [
-            { id: 3, name: 'Dell Monitor 1', price: '$900', image: monitor },
-            { id: 4, name: 'Dell Monitor 2', price: '$1100', image: monitor }
-          ]
-        },
-        {
-          name: 'Tuf',
-          products: [
-            { id: 5, name: 'Tuf Monitor 1', price: '$950', image: monitor },
-            { id: 6, name: 'Tuf Monitor 2', price: '$1150', image: monitor }
-          ]
-        }
-      ]
-    },
-    {
-      category: 'Monitors3',
-      subCat: [
-        {
-          name: 'Asus',
-          products: [
-            { id: 1, name: 'Asus Monitor 1', price: '$1000', image: monitor },
-            { id: 2, name: 'Asus Monitor 2', price: '$1200', image: monitor }
-          ]
-        },
-        {
-          name: 'Dell',
-          products: [
-            { id: 3, name: 'Dell Monitor 1', price: '$900', image: monitor },
-            { id: 4, name: 'Dell Monitor 2', price: '$1100', image: monitor }
-          ]
-        },
-        {
-          name: 'Tuf',
-          products: [
-            { id: 5, name: 'Tuf Monitor 1', price: '$950', image: monitor },
-            { id: 6, name: 'Tuf Monitor 2', price: '$1150', image: monitor }
+            { 
+              id: 5, 
+              name: 'Tuf Monitor 1', 
+              price: '950', 
+              image: monitor,
+              description: "Rugged monitor built for long-lasting performance in extreme conditions.",
+              specs: "28-inch, 4K UHD, 120Hz, TN panel"
+            },
+            { 
+              id: 6, 
+              name: 'Tuf Monitor 2', 
+              price: '1150', 
+              image: monitor,
+              description: "High-refresh-rate monitor with vibrant colors and HDR support.",
+              specs: "32-inch, QHD, 144Hz, HDR, VA panel"
+            }
           ]
         }
       ]
@@ -219,15 +147,43 @@ export const Categories = [
         {
           name: 'CMOS',
           products: [
-            { id: 1, name: 'CMOS Battery 1', price: '$1000', image: cmos },
-            { id: 2, name: 'CMOS Battery 2', price: '$1200', image: cmos }
+            { 
+              id: 1, 
+              name: 'CMOS Battery 1', 
+              price: '1000', 
+              image: cmos,
+              description: "Long-lasting CMOS battery for reliable motherboard clock and settings.",
+              specs: "3V, Lithium, 10-year shelf life"
+            },
+            { 
+              id: 2, 
+              name: 'CMOS Battery 2', 
+              price: '1200', 
+              image: cmos,
+              description: "High-quality CMOS battery with extended life and stable performance.",
+              specs: "3V, Lithium, 15-year shelf life"
+            }
           ]
         },
         {
           name: 'PSU',
           products: [
-            { id: 3, name: 'PSU Battery 1', price: '$900', image: cmos },
-            { id: 4, name: 'PSU Battery 2', price: '$1100', image: cmos }
+            { 
+              id: 3, 
+              name: 'PSU Battery 1', 
+              price: '900', 
+              image: cmos,
+              description: "Reliable PSU battery providing stable power for critical components.",
+              specs: "600W, 80+ Bronze, Modular cables"
+            },
+            { 
+              id: 4, 
+              name: 'PSU Battery 2', 
+              price: '1100', 
+              image: cmos,
+              description: "Efficient PSU battery with silent operation and advanced protections.",
+              specs: "750W, 80+ Gold, Fully modular cables"
+            }
           ]
         }
       ]
@@ -238,152 +194,64 @@ export const Categories = [
         {
           name: 'VGA Cables',
           products: [
-            { id: 1, name: 'VGA Cable 1', price: '$1000', image: cable },
-            { id: 2, name: 'VGA Cable 2', price: '$1200', image: cable }
+            { 
+              id: 1, 
+              name: 'VGA Cable 1', 
+              price: '1000', 
+              image: cable,
+              description: "High-quality VGA cable for clear and reliable video connections.",
+              specs: "1.8m, Gold-plated connectors, Shielded"
+            },
+            { 
+              id: 2, 
+              name: 'VGA Cable 2', 
+              price: '1200', 
+              image: cable,
+              description: "Durable VGA cable with reinforced connectors for long-lasting use.",
+              specs: "3m, Gold-plated connectors, Double-shielded"
+            }
           ]
         },
         {
           name: 'HDMI Cables',
           products: [
-            { id: 3, name: 'HDMI Cable 1', price: '$900', image: cable },
-            { id: 4, name: 'HDMI Cable 2', price: '$1100', image: cable }
+            { 
+              id: 3, 
+              name: 'HDMI Cable 1', 
+              price: '900', 
+              image: cable,
+              description: "High-speed HDMI cable for 4K video and audio transmission.",
+              specs: "2m, 4K@60Hz, Gold-plated connectors, Ethernet support"
+            },
+            { 
+              id: 4, 
+              name: 'HDMI Cable 2', 
+              price: '1100', 
+              image: cable,
+              description: "Premium HDMI cable with enhanced durability and signal integrity.",
+              specs: "3m, 4K@60Hz, Braided, Gold-plated connectors"
+            }
           ]
         },
         {
           name: 'Audio Cables',
           products: [
-            { id: 5, name: 'Audio Cable 1', price: '$950', image: cable },
-            { id: 6, name: 'Audio Cable 2', price: '$1150', image: cable }
-          ]
-        }
-      ]
-    },
-    {
-      category: 'Cables1',
-      subCat: [
-        {
-          name: 'VGA Cables',
-          products: [
-            { id: 1, name: 'VGA Cable 1', price: '$1000', image: cable },
-            { id: 2, name: 'VGA Cable 2', price: '$1200', image: cable }
-          ]
-        },
-        {
-          name: 'HDMI Cables',
-          products: [
-            { id: 3, name: 'HDMI Cable 1', price: '$900', image: cable },
-            { id: 4, name: 'HDMI Cable 2', price: '$1100', image: cable }
-          ]
-        },
-        {
-          name: 'Audio Cables',
-          products: [
-            { id: 5, name: 'Audio Cable 1', price: '$950', image: cable },
-            { id: 6, name: 'Audio Cable 2', price: '$1150', image: cable }
-          ]
-        }
-      ]
-    },
-    {
-      category: 'Cables2',
-      subCat: [
-        {
-          name: 'VGA Cables',
-          products: [
-            { id: 1, name: 'VGA Cable 1', price: '$1000', image: cable },
-            { id: 2, name: 'VGA Cable 2', price: '$1200', image: cable }
-          ]
-        },
-        {
-          name: 'HDMI Cables',
-          products: [
-            { id: 3, name: 'HDMI Cable 1', price: '$900', image: cable },
-            { id: 4, name: 'HDMI Cable 2', price: '$1100', image: cable }
-          ]
-        },
-        {
-          name: 'Audio Cables',
-          products: [
-            { id: 5, name: 'Audio Cable 1', price: '$950', image: cable },
-            { id: 6, name: 'Audio Cable 2', price: '$1150', image: cable }
-          ]
-        }
-      ]
-    },
-    {
-      category: 'Cables3',
-      subCat: [
-        {
-          name: 'VGA Cables',
-          products: [
-            { id: 1, name: 'VGA Cable 1', price: '$1000', image: cable },
-            { id: 2, name: 'VGA Cable 2', price: '$1200', image: cable }
-          ]
-        },
-        {
-          name: 'HDMI Cables',
-          products: [
-            { id: 3, name: 'HDMI Cable 1', price: '$900', image: cable },
-            { id: 4, name: 'HDMI Cable 2', price: '$1100', image: cable }
-          ]
-        },
-        {
-          name: 'Audio Cables',
-          products: [
-            { id: 5, name: 'Audio Cable 1', price: '$950', image: cable },
-            { id: 6, name: 'Audio Cable 2', price: '$1150', image: cable }
-          ]
-        }
-      ]
-    },
-    {
-      category: 'Cables4',
-      subCat: [
-        {
-          name: 'VGA Cables',
-          products: [
-            { id: 1, name: 'VGA Cable 1', price: '$1000', image: cable },
-            { id: 2, name: 'VGA Cable 2', price: '$1200', image: cable }
-          ]
-        },
-        {
-          name: 'HDMI Cables',
-          products: [
-            { id: 3, name: 'HDMI Cable 1', price: '$900', image: cable },
-            { id: 4, name: 'HDMI Cable 2', price: '$1100', image: cable }
-          ]
-        },
-        {
-          name: 'Audio Cables',
-          products: [
-            { id: 5, name: 'Audio Cable 1', price: '$950', image: cable },
-            { id: 6, name: 'Audio Cable 2', price: '$1150', image: cable }
-          ]
-        }
-      ]
-    },
-    {
-      category: 'Cables5',
-      subCat: [
-        {
-          name: 'VGA Cables',
-          products: [
-            { id: 1, name: 'VGA Cable 1', price: '$1000', image: cable },
-            { id: 2, name: 'VGA Cable 2', price: '$1200', image: cable }
-          ]
-        },
-        {
-          name: 'HDMI Cables',
-          products: [
-            { id: 3, name: 'HDMI Cable 1', price: '$900', image: cable },
-            { id: 4, name: 'HDMI Cable 2', price: '$1100', image: cable }
-          ]
-        },
-        {
-          name: 'Audio Cables',
-          products: [
-            { id: 5, name: 'Audio Cable 1', price: '$950', image: cable },
-            { id: 6, name: 'Audio Cable 2', price: '$1150', image: cable }
+            { 
+              id: 5, 
+              name: 'Audio Cable 1', 
+              price: '950', 
+              image: cable,
+              description: "High-fidelity audio cable for superior sound quality.",
+              specs: "1.5m, 3.5mm to 3.5mm, Oxygen-free copper, Gold-plated connectors"
+            },
+            { 
+              id: 6, 
+              name: 'Audio Cable 2', 
+              price: '1150', 
+              image: cable,
+              description: "Professional-grade audio cable with noise reduction features.",
+              specs: "2m, 3.5mm to 3.5mm, Braided, Gold-plated connectors, Shielded"
+            }
           ]
         }
       ]
@@ -394,207 +262,66 @@ export const Categories = [
         {
           name: 'Asus Laptop',
           products: [
-            { id: 1, name: 'Asus laptop 1', price: '$1000', image: laptop },
-            { id: 2, name: 'Asus laptop 2', price: '$1200', image: laptop },
-            { id: 3, name: 'Asus laptop 3', price: '$1200', image: laptop },
-            { id: 4, name: 'Asus laptop 4', price: '$1200', image: laptop },
-            { id: 5, name: 'Asus laptop 5', price: '$1500', image: laptop },
-            { id: 6, name: 'Asus laptop 6', price: '$1200', image: laptop },
-            { id: 7, name: 'Asus laptop 7', price: '$4200', image: laptop },
-            { id: 8, name: 'Asus laptop 8', price: '$1200', image: laptop },
-            { id: 9, name: 'Asus laptop 9', price: '$1200', image: laptop },
-            { id: 10, name: 'Asus laptop 10', price: '$1200', image: laptop },
-            { id: 11, name: 'Asus laptop 11', price: '$4200', image: laptop },
-            { id: 12, name: 'Asus laptop 12', price: '$1200', image: laptop },
-            { id: 13, name: 'Asus laptop 13', price: '$1200', image: laptop },
-            { id: 14, name: 'Asus laptop 14', price: '$1200', image: laptop },
+            { 
+              id: 1, 
+              name: 'Asus laptop 1', 
+              price: '1000', 
+              image: laptop,
+              description: "Versatile laptop with a lightweight design and powerful performance.",
+              specs: "Intel i5, 8GB RAM, 256GB SSD, 14-inch display, Backlit keyboard"
+            },
+            { 
+              id: 2, 
+              name: 'Asus laptop 2', 
+              price: '1200', 
+              image: laptop,
+              description: "High-end laptop with superior graphics and fast processing speeds.",
+              specs: "Intel i7, 16GB RAM, 512GB SSD, NVIDIA GTX 1650, 15.6-inch display"
+            }
           ]
         },
         {
           name: 'Dell Laptop',
           products: [
-            { id: 3, name: 'Dell laptop 1', price: '$900', image: laptop },
-            { id: 4, name: 'Dell laptop 2', price: '$1100', image: laptop }
+            { 
+              id: 3, 
+              name: 'Dell laptop 1', 
+              price: '1000', 
+              image: laptop,
+              description: "Compact Dell laptop with efficient performance and stylish design.",
+              specs: "Intel i5, 8GB RAM, 256GB SSD, 13.3-inch display"
+            },
+            { 
+              id: 4, 
+              name: 'Dell laptop 2', 
+              price: '1200', 
+              image: laptop,
+              description: "Advanced Dell laptop with robust security features and sleek aesthetics.",
+              specs: "Intel i7, 16GB RAM, 512GB SSD, 14-inch display, Fingerprint reader"
+            }
           ]
         },
         {
-          name: 'Tuf laptop',
+          name: 'MacBook',
           products: [
-            { id: 5, name: 'Tuf laptop 1', price: '$950', image: laptop },
-            { id: 6, name: 'Tuf laptop 2', price: '$1150', image: laptop }
+            { 
+              id: 5, 
+              name: 'MacBook Pro', 
+              price: '2000', 
+              image: laptop,
+              description: "High-performance MacBook Pro with stunning Retina display and M1 chip.",
+              specs: "Apple M1, 16GB RAM, 512GB SSD, 13-inch Retina display, Touch Bar"
+            },
+            { 
+              id: 6, 
+              name: 'MacBook Air', 
+              price: '1500', 
+              image: laptop,
+              description: "Lightweight MacBook Air with powerful performance and long battery life.",
+              specs: "Apple M1, 8GB RAM, 256GB SSD, 13-inch Retina display, Touch ID"
+            }
           ]
-        },
+        }
       ]
-    },
-    {
-      category: 'Laptops2',
-      subCat: [
-        {
-          name: 'Asus Laptop',
-          products: [
-            { id: 1, name: 'Asus laptop 1', price: '$1000', image: laptop },
-            { id: 2, name: 'Asus laptop 2', price: '$1200', image: laptop },
-            { id: 3, name: 'Asus laptop 3', price: '$1200', image: laptop },
-            { id: 4, name: 'Asus laptop 4', price: '$1200', image: laptop },
-            { id: 5, name: 'Asus laptop 5', price: '$1500', image: laptop },
-            { id: 6, name: 'Asus laptop 6', price: '$1200', image: laptop },
-            { id: 7, name: 'Asus laptop 7', price: '$4200', image: laptop },
-            { id: 8, name: 'Asus laptop 8', price: '$1200', image: laptop },
-            { id: 9, name: 'Asus laptop 9', price: '$1200', image: laptop },
-            { id: 10, name: 'Asus laptop 10', price: '$1200', image: laptop },
-          ]
-        },
-        {
-          name: 'Dell Laptop',
-          products: [
-            { id: 3, name: 'Dell laptop 1', price: '$900', image: laptop },
-            { id: 4, name: 'Dell laptop 2', price: '$1100', image: laptop }
-          ]
-        },
-        {
-          name: 'Tuf laptop',
-          products: [
-            { id: 5, name: 'Tuf laptop 1', price: '$950', image: laptop },
-            { id: 6, name: 'Tuf laptop 2', price: '$1150', image: laptop }
-          ]
-        },
-      ]
-    },
-    {
-      category: 'Laptops3',
-      subCat: [
-        {
-          name: 'Asus Laptop',
-          products: [
-            { id: 1, name: 'Asus laptop 1', price: '$1000', image: laptop },
-            { id: 2, name: 'Asus laptop 2', price: '$1200', image: laptop },
-            { id: 3, name: 'Asus laptop 3', price: '$1200', image: laptop },
-            { id: 4, name: 'Asus laptop 4', price: '$1200', image: laptop },
-            { id: 5, name: 'Asus laptop 5', price: '$1500', image: laptop },
-            { id: 6, name: 'Asus laptop 6', price: '$1200', image: laptop },
-            { id: 7, name: 'Asus laptop 7', price: '$4200', image: laptop },
-            { id: 8, name: 'Asus laptop 8', price: '$1200', image: laptop },
-            { id: 9, name: 'Asus laptop 9', price: '$1200', image: laptop },
-            { id: 10, name: 'Asus laptop 10', price: '$1200', image: laptop },
-          ]
-        },
-        {
-          name: 'Dell Laptop',
-          products: [
-            { id: 3, name: 'Dell laptop 1', price: '$900', image: laptop },
-            { id: 4, name: 'Dell laptop 2', price: '$1100', image: laptop }
-          ]
-        },
-        {
-          name: 'Tuf laptop',
-          products: [
-            { id: 5, name: 'Tuf laptop 1', price: '$950', image: laptop },
-            { id: 6, name: 'Tuf laptop 2', price: '$1150', image: laptop }
-          ]
-        },
-      ]
-    },
-    {
-      category: 'Laptops4',
-      subCat: [
-        {
-          name: 'Asus Laptop',
-          products: [
-            { id: 1, name: 'Asus laptop 1', price: '$1000', image: laptop },
-            { id: 2, name: 'Asus laptop 2', price: '$1200', image: laptop },
-            { id: 3, name: 'Asus laptop 3', price: '$1200', image: laptop },
-            { id: 4, name: 'Asus laptop 4', price: '$1200', image: laptop },
-            { id: 5, name: 'Asus laptop 5', price: '$1500', image: laptop },
-            { id: 6, name: 'Asus laptop 6', price: '$1200', image: laptop },
-            { id: 7, name: 'Asus laptop 7', price: '$4200', image: laptop },
-            { id: 8, name: 'Asus laptop 8', price: '$1200', image: laptop },
-            { id: 9, name: 'Asus laptop 9', price: '$1200', image: laptop },
-            { id: 10, name: 'Asus laptop 10', price: '$1200', image: laptop },
-          ]
-        },
-        {
-          name: 'Dell Laptop',
-          products: [
-            { id: 3, name: 'Dell laptop 1', price: '$900', image: laptop },
-            { id: 4, name: 'Dell laptop 2', price: '$1100', image: laptop }
-          ]
-        },
-        {
-          name: 'Tuf laptop',
-          products: [
-            { id: 5, name: 'Tuf laptop 1', price: '$950', image: laptop },
-            { id: 6, name: 'Tuf laptop 2', price: '$1150', image: laptop }
-          ]
-        },
-      ]
-    },
-    {
-      category: 'Laptops5',
-      subCat: [
-        {
-          name: 'Asus Laptop',
-          products: [
-            { id: 1, name: 'Asus laptop 1', price: '$1000', image: laptop },
-            { id: 2, name: 'Asus laptop 2', price: '$1200', image: laptop },
-            { id: 3, name: 'Asus laptop 3', price: '$1200', image: laptop },
-            { id: 4, name: 'Asus laptop 4', price: '$1200', image: laptop },
-            { id: 5, name: 'Asus laptop 5', price: '$1500', image: laptop },
-            { id: 6, name: 'Asus laptop 6', price: '$1200', image: laptop },
-            { id: 7, name: 'Asus laptop 7', price: '$4200', image: laptop },
-            { id: 8, name: 'Asus laptop 8', price: '$1200', image: laptop },
-            { id: 9, name: 'Asus laptop 9', price: '$1200', image: laptop },
-            { id: 10, name: 'Asus laptop 10', price: '$1200', image: laptop },
-          ]
-        },
-        {
-          name: 'Dell Laptop',
-          products: [
-            { id: 3, name: 'Dell laptop 1', price: '$900', image: laptop },
-            { id: 4, name: 'Dell laptop 2', price: '$1100', image: laptop }
-          ]
-        },
-        {
-          name: 'Tuf laptop',
-          products: [
-            { id: 5, name: 'Tuf laptop 1', price: '$950', image: laptop },
-            { id: 6, name: 'Tuf laptop 2', price: '$1150', image: laptop }
-          ]
-        },
-      ]
-    },
-    {
-      category: 'Laptops6',
-      subCat: [
-        {
-          name: 'Asus Laptop',
-          products: [
-            { id: 1, name: 'Asus laptop 1', price: '$1000', image: laptop },
-            { id: 2, name: 'Asus laptop 2', price: '$1200', image: laptop },
-            { id: 3, name: 'Asus laptop 3', price: '$1200', image: laptop },
-            { id: 4, name: 'Asus laptop 4', price: '$1200', image: laptop },
-            { id: 5, name: 'Asus laptop 5', price: '$1500', image: laptop },
-            { id: 6, name: 'Asus laptop 6', price: '$1200', image: laptop },
-            { id: 7, name: 'Asus laptop 7', price: '$4200', image: laptop },
-            { id: 8, name: 'Asus laptop 8', price: '$1200', image: laptop },
-            { id: 9, name: 'Asus laptop 9', price: '$1200', image: laptop },
-            { id: 10, name: 'Asus laptop 10', price: '$1200', image: laptop },
-          ]
-        },
-        {
-          name: 'Dell Laptop',
-          products: [
-            { id: 3, name: 'Dell laptop 1', price: '$900', image: laptop },
-            { id: 4, name: 'Dell laptop 2', price: '$1100', image: laptop }
-          ]
-        },
-        {
-          name: 'Tuf laptop',
-          products: [
-            { id: 5, name: 'Tuf laptop 1', price: '$950', image: laptop },
-            { id: 6, name: 'Tuf laptop 2', price: '$1150', image: laptop }
-          ]
-        },
-      ]
-    },
-  ];
-  
+    }
+];

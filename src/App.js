@@ -17,6 +17,12 @@ import Login from './Pages/Login';
 import ProductDescription from './Components/ProductDescription';
 import Cart from './Components/Cart';
 import { CartProvider } from './Components/CartContext';
+import Checkout from './Components/Checkout';
+import Profile from './Components/Profile';
+import Orders from './Components/Orders';
+import OrderDetails from './Components/OrderDetails';
+import EditProfile from './Components/EditProfile';
+import EditPassword from './Components/EditPassword';
 
 
 function BackgroundImages() {
@@ -29,8 +35,8 @@ function BackgroundImages() {
   return (
     <div className='absolute opacity-25'>
       <img className='' src={bgPic} alt="background" />
-      <img className={`${isActive('/about-us') || isActive('/contact-us') || isActive('/login') || isActive('/cart') ? 'hidden' : ''}`} src={bgPic2} alt="background2" />
-      <img className={`${isActive('/') ? '' : 'hidden'}`} src={bgPic3} alt="background2" />
+      {/*<img className={`${isActive('/about-us') || isActive('/contact-us') || isActive('/edit-profile') || isActive('/edit-password') || isActive('/order-details') || isActive('/login') || isActive('/orders') || isActive('/cart') || isActive('/profile') || isActive('/checkout') ? 'hidden' : ''}`} src={bgPic2} alt="background2" />
+      <img className={`${isActive('/') ? '' : 'hidden'}`} src={bgPic3} alt="background2" />*/}
     </div>
   );
 }
@@ -58,6 +64,12 @@ function App() {
               <Route path="/contact-us" element={<Contact/>} />
               <Route path="/login" element={<Login/>} />
               <Route path="/cart" element={<Cart/>} />
+              <Route path="/checkout" element={<Checkout/>} />
+              <Route path="/profile" element={<Profile/>} />
+              <Route path="/orders" element={<Orders/>} />
+              <Route path="/order-details" element={<OrderDetails/>} />
+              <Route path="/edit-profile" element={<EditProfile/>} />
+              <Route path="/edit-password" element={<EditPassword/>} />
             </Routes>
             <Footer/>
           </Router>

@@ -4,6 +4,7 @@ import { CartContext } from '../Components/CartContext'; // Import CartContext
 const ProductDescription = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const [showMessage, setShowMessage] = useState(false); // State for showing the message
+  const [view, setView] = useState('description'); // State for toggling between description and specifications
   const { addToCart } = useContext(CartContext); // Use CartContext
 
   const handleIncrease = () => {
@@ -36,7 +37,41 @@ const ProductDescription = ({ product }) => {
         <div>
           <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
           <p className="text-gray-600 mb-4">${formatPrice(product.price)}</p>
-          <p className="mb-4">{product.description}</p>
+
+          {/* Toggle Buttons */}
+          <div className="flex mb-4">
+            <button
+              onClick={() => setView('description')}
+              className={`py-2 px-4 ${view === 'description' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} rounded-l focus:outline-none`}
+            >
+              Description
+            </button>
+            <button
+              onClick={() => setView('specifications')}
+              className={`py-2 px-4 ${view === 'specifications' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} rounded-r focus:outline-none`}
+            >
+              Specifications
+            </button>
+          </div>
+
+          {/* Content Area */}
+          <div className="mb-4">
+            {view === 'description' ? (
+              <p>{product.description}</p>
+            ) : (
+              <ul>
+                {product.specifications && product.specifications.length > 0 ? (
+                  product.specifications.map((spec, index) => (
+                    <li key={index} className="mb-2">
+                      <span className="font-semibold">{spec.name}:</span> {spec.value}
+                    </li>
+                  ))
+                ) : (
+                  <p>No specifications available.</p>
+                )}
+              </ul>
+            )}
+          </div>
 
           {/* Quantity Adjustment */}
           <div className="flex items-center mb-4">

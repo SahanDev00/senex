@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../Components/CartContext';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const { cartItems } = useContext(CartContext);
@@ -36,7 +37,9 @@ const Cart = () => {
             ))}
           </ul>
           <div className="flex justify-end mt-4">
-            <button className="bg-blue-500 text-white py-2 px-4 rounded">Checkout</button>
+            <Link to='/checkout'>
+              <button className="bg-blue-500 text-white py-2 px-4 rounded">Checkout</button>
+            </Link>
           </div>
         </div>
       )}

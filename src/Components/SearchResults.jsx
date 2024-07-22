@@ -59,12 +59,12 @@ const SearchResults = () => {
           <p className='ml-2 mt-1 mb-3 text-white'>{filteredProducts.length} products found</p>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {currentProducts.map((product, index) => (
-              <div key={index} className="border bg-white hover:scale-105 duration-300 m-1 p-4 rounded hover:shadow-lg shadow cursor-pointer" onClick={() => setSelectedProduct(product)}>
+              <div key={index} className="border border-gray-500 hover:scale-105 duration-300 m-1 p-4 rounded hover:shadow-lg shadow cursor-pointer" onClick={() => setSelectedProduct(product)}>
                 <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4" />
-                <h2 className="text-xl font-semibold">{product.name}</h2>
-                <p className="text-gray-600">${Number(product.price).toFixed(2)}</p> {/* Ensure price is formatted */}
+                <h2 className="text-xl text-center text-white font-semibold">{product.name}</h2>
+                <p className=" text-center text-white">${Number(product.price).toFixed(2)}</p> {/* Ensure price is formatted */}
                 <button
-                  className="mt-2 bg-blue-500 text-white py-2 px-4 rounded"
+                  className="mt-2 flex mx-auto bg-red-500 text-white py-2 px-4 rounded"
                   onClick={(e) => handleAddToCart(product, e)} // Handle Add to Cart
                 >
                   Add to Cart
