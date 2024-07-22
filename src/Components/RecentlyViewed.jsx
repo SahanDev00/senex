@@ -78,7 +78,7 @@ const RecentlyViewed = () => {
             {bestSellingItems.map((product) => (
               <div key={product.id} className='p-4'>
                 <div
-                  className='w-[260px] bg-black/60 hover:scale-105 duration-300 h-[320px] rounded-xl mx-auto p-4 shadow hover:shadow-md border border-gray-500 flex-shrink-0 cursor-pointer'
+                  className='w-[260px] active:cursor-grabbing bg-black/60 hover:scale-105 duration-300 h-[320px] rounded-xl mx-auto p-4 shadow hover:shadow-md border border-gray-500 flex-shrink-0 cursor-pointer'
                   onClick={() => setSelectedProduct(product)}
                 >
                   <img className='w-full h-40 object-cover mb-4 rounded-xl border-white' src={product.image} alt={product.name} />

@@ -1,8 +1,8 @@
-import cable from "./Assets/Images/cable.jpg"
+import cable from "./Assets/Images/Cablepng.png"
 import monitor from "./Assets/Images/monitor.png"
-import computer from "./Assets/Images/computer.jpg"
-import cmos from "./Assets/Images/cmos.png"
-import laptop from "./Assets/Images/laptop.png"
+import computer from "./Assets/Images/PCpng.png"
+import cmos from "./Assets/Images/Cmospng.png"
+import laptop from "./Assets/Images/Lappng.png"
 
 export const Categories = [
     {
