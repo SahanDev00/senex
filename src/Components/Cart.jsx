@@ -13,6 +13,13 @@ const Cart = () => {
     return isNaN(num) ? '0.00' : num.toFixed(2);
   };
 
+  const calculateTotal = () => {
+    return cartItems.reduce((total, item) => {
+      const itemPrice = parseFloat(formatPrice(item.price)) * item.quantity;
+      return total + itemPrice;
+    }, 0).toFixed(2);
+  };
+
   return (
     <div className="w-[95%] mx-auto mt-10 min-h-[800px] relative">
       <h1 className="text-3xl font-bold mb-4 text-white text-center font-poppins">Shopping Cart</h1>
@@ -36,7 +43,8 @@ const Cart = () => {
               </li>
             ))}
           </ul>
-          <div className="flex justify-end mt-4">
+          <div className="flex items-center justify-end mt-4">
+            <p className="text-xl text-white font-semibold font-poppins mr-4">Total: ${calculateTotal()}</p>
             <Link to='/checkout'>
               <button className="bg-blue-500 text-white py-2 px-4 rounded font-poppins">Checkout</button>
             </Link>

@@ -45,7 +45,7 @@ const Contact = () => {
               <div>
                 <textarea id="message" className='block w-full mt-1 p-2 border border-gray-300 rounded-md' placeholder='Message' rows="4" required></textarea>
               </div>
-              <button type='submit' className='mt-4 px-4 py-2 bg-red-600 text-white font-semibold border duration-200 rounded-md w-full hover:scale-105 active:scale-100'>Send Message</button>
+              <button type='submit' className='mt-4 px-4 py-2 bg-red-600 text-white font-semibold border duration-200 rounded-md w-[150px] hover:scale-105 active:scale-100'>Send Message</button>
             </form>
           </div>
         </div>
