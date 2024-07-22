@@ -50,7 +50,7 @@ const SearchResults = () => {
   };
 
   return (
-    <div className="w-[91%] p-4 relative">
+    <div className="w-[91%] p-4 relative font-poppins">
       {filteredProducts.length === 0 ? (
         <NotFound searchTerm={query} />
       ) : (
@@ -59,7 +59,7 @@ const SearchResults = () => {
           <p className='ml-2 mt-1 mb-3 text-white'>{filteredProducts.length} products found</p>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {currentProducts.map((product, index) => (
-              <div key={index} className="border border-gray-500 hover:scale-105 duration-300 m-1 p-4 rounded hover:shadow-lg shadow cursor-pointer" onClick={() => setSelectedProduct(product)}>
+              <div key={index} className="border bg-black/40 border-gray-500 hover:scale-105 duration-300 m-1 p-4 rounded hover:shadow-lg shadow cursor-pointer" onClick={() => setSelectedProduct(product)}>
                 <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4" />
                 <h2 className="text-xl text-center text-white font-semibold">{product.name}</h2>
                 <p className=" text-center text-white">${Number(product.price).toFixed(2)}</p> {/* Ensure price is formatted */}

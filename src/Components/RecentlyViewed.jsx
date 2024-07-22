@@ -69,7 +69,7 @@ const RecentlyViewed = () => {
   };
 
   return (
-    <div className='w-[95%] h-[50vh] bg-black/30 flex mx-auto mt-10 relative border-gray-500 items-center rounded-xl justify-center'>
+    <div className='w-[95%] h-[50vh] bg-black/30 flex font-poppins mx-auto mt-10 relative border-gray-500 items-center rounded-xl justify-center'>
       <div className='w-[95%] h-[95%]'>
         <h1 className='font-semibold text-3xl mt-2 text-white'>RECENTLY VIEWED ITEMS</h1>
 

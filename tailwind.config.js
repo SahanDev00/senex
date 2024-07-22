@@ -4,6 +4,10 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      poppins: ['Poppins', 'sans-serif'],
+      mono: ["Share Tech Mono", "monospace"]
+    },
     extend: {},
   },
   plugins: [],

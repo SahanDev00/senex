@@ -15,9 +15,9 @@ const Cart = () => {
 
   return (
     <div className="w-[95%] mx-auto mt-10 min-h-[800px] relative">
-      <h1 className="text-3xl font-bold mb-4 text-white text-center">Shopping Cart</h1>
+      <h1 className="text-3xl font-bold mb-4 text-white text-center font-poppins">Shopping Cart</h1>
       {cartItems.length === 0 ? (
-        <p className='text-white ml-40 text-xl'>Your cart is empty.</p>
+        <p className='text-white ml-40 text-xl font-poppins'>Your cart is empty.</p>
       ) : (
         <div>
           <ul>
@@ -26,19 +26,19 @@ const Cart = () => {
                 <div className="flex items-center">
                   <img src={item.image} alt={item.name} className="w-16 h-16 object-cover mr-4" />
                   <div>
-                    <h2 className="text-xl text-white font-semibold">{item.name}</h2>
-                    <p className="text-white">Quantity: {item.quantity}</p>
+                    <h2 className="text-xl text-white font-semibold font-poppins">{item.name}</h2>
+                    <p className="text-white font-poppins">Quantity: {item.quantity}</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-lg text-white font-semibold">${formatPrice(item.price)}</p>
+                  <p className="text-lg text-white font-semibold font-poppins">${formatPrice(item.price)}</p>
                 </div>
               </li>
             ))}
           </ul>
           <div className="flex justify-end mt-4">
             <Link to='/checkout'>
-              <button className="bg-blue-500 text-white py-2 px-4 rounded">Checkout</button>
+              <button className="bg-blue-500 text-white py-2 px-4 rounded font-poppins">Checkout</button>
             </Link>
           </div>
         </div>

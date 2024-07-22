@@ -11,7 +11,7 @@ const Contact = () => {
         </h1>
         <p className="text-lg mb-6 font-semibold text-white mt-2 text-center">Find us here:</p>
         <div className='flex justify-center float-up'>
-          <iframe 
+          <iframe title='map'
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15837.232602223477!2d79.890112!3d7.0902333!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f1ca7b5ee0dd%3A0x4d5d1bdf422f29f8!2sMICROSIS%20COMPUTER!5e0!3m2!1sen!2slk!4v1721362612424!5m2!1sen!2slk" 
             width="1850" 
             height="600" 

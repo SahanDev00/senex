@@ -59,14 +59,14 @@ const ProductsPage = () => {
   };
 
   return (
-    <div className="w-[91%] p-4 relative">
+    <div className="w-[91%] p-4 relative font-poppins">
       <h1 className="text-2xl text-white font-bold mb-3">{subCategoryName} Products</h1>
       {products.length > 0 ? (
         <div>
           <p className="mb-2 text-white">{products.length} products found</p>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {currentProducts.map((product) => (
-              <div key={product.id} className="border hover:scale-105 duration-300 m-1 p-5 rounded hover:shadow-lg shadow cursor-pointer" onClick={() => setSelectedProduct(product)}>
+              <div key={product.id} className="border bg-black/40 hover:scale-105 duration-300 m-1 p-5 rounded hover:shadow-lg shadow cursor-pointer" onClick={() => setSelectedProduct(product)}>
                 <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4" />
                 <h2 className="text-xl text-white text-center font-semibold">{product.name}</h2>
                 <p className="text-white text-center ">${Number(product.price).toFixed(2)}</p> {/* Ensure price is formatted */}

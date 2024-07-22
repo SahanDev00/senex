@@ -10,7 +10,7 @@ const Footer = () => {
       <div className='w-[85%] h-full mx-auto flex justify-between related'>
         <div className='grid grid-cols-3 mt-14'>
           <div className=''>
-            <h1 className='text-xl text-white font-semibold mb-3'>Information</h1>
+            <h1 className='text-xl text-white font-semibold mb-3 font-poppins'>Information</h1>
             <p className='mb-1 text-gray-200 cursor-pointer hover:text-white'>About us</p>
             <p className='mb-1 text-gray-200 cursor-pointer hover:text-white'>Contact us</p>
             <p className='mb-1 text-gray-200 cursor-pointer hover:text-white'>Return Policies</p>
@@ -18,7 +18,7 @@ const Footer = () => {
             <p className='mb-1 text-gray-200 cursor-pointer hover:text-white'>Terms & Condition</p>
           </div>
           <div className=''>
-            <h1 className='text-xl text-white font-semibold mb-3'>Contact Info</h1>
+            <h1 className='text-xl text-white font-semibold mb-3 font-poppins'>Contact Info</h1>
             <p className='mb-1 text-gray-200'>Hotline: +94777300288</p>
             <p className='mb-1 text-gray-200'>Showroom: +94114468500</p>
             <p className='mb-1 text-gray-200'>Workshop: +94114673950</p>
@@ -26,12 +26,12 @@ const Footer = () => {
             <p className='mb-1 text-gray-200'>Email: msds.net@live.com</p>
           </div>
           <div className=''>
-            <h1 className='text-xl text-white font-semibold mb-3'>Address</h1>
+            <h1 className='text-xl text-white font-semibold mb-3 font-poppins'>Address</h1>
             <p className='mb-1 text-gray-200'>Microsis Computers</p>
             <p className='mb-1 text-gray-200'>No 29 UC Shipping Complex <br/>Ja-Ela 11350<br/>Sri Lanka</p>
             <p className='mb-1 text-gray-200'>WORKING DAYS / HOURS: MON - SUN / <br/>9:00 AM - 8.00 PM</p>
           </div>
-          <div className='absolute mt-64 text-gray-200'>
+          <div className='absolute mt-64 text-gray-200 font-poppins'>
             <p>The best place to buy Laptops, Computers & Accessories. Personal Computers, Laptop Computers, <br/>Computer Accessories, Network Products, Repairs</p>
           </div>
         </div>
@@ -42,8 +42,8 @@ const Footer = () => {
             <div className='flex items-center'>
               <PiTelegramLogoLight size={40} className='mr-5 text-white'/>
               <div>
-                <h1 className='flex items-center text-white text-2xl font-semibold'>SIGN UP TO NEWSLETTER</h1>
-                <p className='text-white'>Recieve $20 Coupon for the First Shopping.</p>
+                <h1 className='flex items-center text-white text-2xl font-semibold font-poppins'>SIGN UP TO NEWSLETTER</h1>
+                <p className='text-white font-poppins'>Recieve $20 Coupon for the First Shopping.</p>
               </div>
             </div>
             <div className='mt-8'>
@@ -57,8 +57,8 @@ const Footer = () => {
                 <PiHeadsetBold size={45} className='text-white mr-5'/>
               </div>
               <div>
-                <h1 className='text-white font-semibold text-lg'>Got a question? Call us 24/7!</h1>
-                <p className='text-white text-3xl'>0777-300-288</p>
+                <h1 className='text-white font-semibold text-lg font-poppins'>Got a question? Call us 24/7!</h1>
+                <p className='text-white text-3xl font-poppins'>0777-300-288</p>
               </div>
             </div>
             <div className='flex gap-7 mt-10'>
@@ -72,7 +72,7 @@ const Footer = () => {
       <div className='w-full h-[70px] bg-white border-red-600 border-2'>
         <div className='w-[80%] h-full flex mx-auto items-center justify-between'> 
           <h1 className='text-4xl font-bold text-red-600 cursor-pointer'>SENƎX</h1>
-          <p>Copyright © <span className='font-semibold'>Exesmart</span> - All rights Reserved</p>
+          <p className='font-poppins'>Copyright © <span className='font-semibold'>Exesmart</span> - All rights Reserved</p>
           <img src={paymentPic} alt="" />
         </div>
       </div>

@@ -71,7 +71,7 @@ const BestSelling = () => {
   return (
     <div className='w-[95%] h-[50vh] bg-black/30 flex mx-auto mt-10 relative border-gray-500 items-center rounded-xl justify-center'>
       <div className='w-[95%] h-[95%]'>
-        <h1 className='font-semibold text-3xl mt-2 text-white'>BEST SELLING ITEMS</h1>
+        <h1 className='font-semibold text-3xl mt-2 text-white font-poppins'>BEST SELLING ITEMS</h1>
 
         <div className='mt-4 w-full h-[370px]'>
           <Slider {...settings}>
@@ -82,10 +82,10 @@ const BestSelling = () => {
                   onClick={() => setSelectedProduct(product)}
                 >
                   <img className='w-full h-40 object-cover mb-4 rounded-xl border-white' src={product.image} alt={product.name} />
-                  <h1 className='text-xl text-center mt-2 font-semibold text-white'>{product.name}</h1>
-                  <p className='text-white text-center'>${product.price}</p>
+                  <h1 className='text-xl text-center mt-2 font-poppins font-semibold text-white'>{product.name}</h1>
+                  <p className='text-white text-center font-poppins'>${product.price}</p>
                   <button
-                    className='py-2 flex mx-auto px-4 rounded mt-2 bg-red-500 text-white'
+                    className='py-2 font-poppins flex mx-auto px-4 rounded mt-2 bg-red-500 text-white'
                     onClick={(e) => handleAddToCart(e, product)}
                   >
                     Add To Cart

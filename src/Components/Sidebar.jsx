@@ -1,16 +1,13 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Categories } from '../products';
 import { RiArrowDropRightLine } from "react-icons/ri";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { SearchContext } from '../SearchContext';
 import FilterSection from './FilterSection'; // Import FilterSection
 
 const Sidebar = () => {
   const { clearSearchQuery } = useContext(SearchContext);
-
-  const handleCategoryClick = () => {
-    clearSearchQuery();
-  };
+  const location = useLocation(); // Get the current location
 
   const [collapsedSections, setCollapsedSections] = useState({});
   const [selectedSubCategory, setSelectedSubCategory] = useState(null); // State for selected subcategory
@@ -29,7 +26,7 @@ const Sidebar = () => {
   };
 
   const handleSubCategoryClick = (subCategory) => {
-    handleCategoryClick();
+    clearSearchQuery();
     setSelectedSubCategory(subCategory);
   };
 
@@ -37,8 +34,15 @@ const Sidebar = () => {
     setSelectedSubCategory(null);
   };
 
+  useEffect(() => {
+    // Close the filter section if the path is '/product'
+    if (location.pathname === '/product') {
+      handleCloseFilterSection();
+    }
+  }, [location.pathname]);
+
   return (
-    <div className="flex">
+    <div className="flex font-poppins">
       <div className='w-[250px] border-red-600 border ml-36 mt-4 h-[780px] overflow-y-scroll bg-white'>
         <div className='w-full h-[50px] border bg-red-600 border-white'>
           <h1 className='flex items-center justify-center text-white w-full h-full uppercase font-semibold text-lg'>Categories</h1>
@@ -59,7 +63,10 @@ const Sidebar = () => {
                   <ul>
                     {category.subCat.map((subCategory, subIndex) => (
                       <li className='mb-2 uppercase ml-9 text-sm cursor-pointer' key={`${index}-${subIndex}`}>
-                        <Link onClick={() => handleSubCategoryClick(subCategory.name)} to={`/product/products/${subCategory.name}`}>
+                        <Link 
+                          onClick={() => handleSubCategoryClick(subCategory.name)} // Call handleSubCategoryClick on click
+                          to={`/product/products/${subCategory.name}`}
+                        >
                           {subCategory.name}
                         </Link>
                       </li>

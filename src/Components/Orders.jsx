@@ -32,36 +32,36 @@ const Orders = () => {
 
   return (
     <div className='w-[80%] min-h-[830px] relative mx-auto px-4 py-8 mb-5'>
-      <h1 className='text-2xl font-bold mb-5 text-white'>Track My Orders</h1>
+      <h1 className='text-2xl font-bold mb-5 text-white font-poppins'>Track My Orders</h1>
       <div className='overflow-x-auto'>
         <table className='min-w-full bg-black/70 text-white border border-gray-200'>
           <thead>
             <tr>
-              <th className='px-4 py-2 border-b border-gray-200'>Order ID</th>
-              <th className='px-4 py-2 border-b border-gray-200'>Address</th>
-              <th className='px-4 py-2 border-b border-gray-200'>Date</th>
-              <th className='px-4 py-2 border-b border-gray-200'>Total</th>
-              <th className='px-4 py-2 border-b border-gray-200'>Status</th>
-              <th className='px-4 py-2 border-b border-gray-200'>Paid Status</th>
-              <th className='px-4 py-2 border-b border-gray-200'>Actions</th>
+              <th className='px-4 py-2 border-b border-gray-200 font-poppins'>Order ID</th>
+              <th className='px-4 py-2 border-b border-gray-200 font-poppins'>Address</th>
+              <th className='px-4 py-2 border-b border-gray-200 font-poppins'>Date</th>
+              <th className='px-4 py-2 border-b border-gray-200 font-poppins'>Total</th>
+              <th className='px-4 py-2 border-b border-gray-200 font-poppins'>Status</th>
+              <th className='px-4 py-2 border-b border-gray-200 font-poppins'>Paid Status</th>
+              <th className='px-4 py-2 border-b border-gray-200 font-poppins'>Actions</th>
             </tr>
           </thead>
           <tbody>
             {orders.map(order => (
               <tr key={order.id}>
-                <td className='px-4 py-2 border-b border-gray-200'>{order.id}</td>
-                <td className='px-4 py-2 border-b border-gray-200'>{order.address}</td>
-                <td className='px-4 py-2 border-b border-gray-200'>{order.date}</td>
-                <td className='px-4 py-2 border-b border-gray-200'>{order.total}</td>
-                <td className={`px-4 py-2 border-b border-gray-200 ${order.status === 'Pending' ? 'text-yellow-500' : order.status === 'Completed' ? 'text-green-500' : 'text-red-500'}`}>
+                <td className='px-4 py-2 border-b border-gray-200 font-poppins'>{order.id}</td>
+                <td className='px-4 py-2 border-b border-gray-200 font-poppins'>{order.address}</td>
+                <td className='px-4 py-2 border-b border-gray-200 font-poppins'>{order.date}</td>
+                <td className='px-4 py-2 border-b border-gray-200 font-poppins'>{order.total}</td>
+                <td className={`px-4 py-2 border-b border-gray-200 font-poppins ${order.status === 'Pending' ? 'text-yellow-500' : order.status === 'Completed' ? 'text-green-500' : 'text-red-500'}`}>
                   {order.status}
                 </td>
-                <td className={`px-4 py-2 border-b border-gray-200 ${order.paidStatus === 'Paid' ? 'text-green-500' : 'text-red-500'}`}>
+                <td className={`px-4 font-poppins py-2 border-b border-gray-200 ${order.paidStatus === 'Paid' ? 'text-green-500' : 'text-red-500'}`}>
                   {order.paidStatus}
                 </td>
-                <td className='px-4 py-2 border-b border-gray-200'>
+                <td className='px-4 font-poppins py-2 border-b border-gray-200'>
                     <Link to='/order-details'>
-                        <button className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600'>
+                        <button className='bg-blue-500 font-poppins text-white px-4 py-2 rounded hover:bg-blue-600'>
                             View
                         </button>
                   </Link>

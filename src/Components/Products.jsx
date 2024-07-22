@@ -18,8 +18,8 @@ const Products = () => {
 
     return (
         <div className="products">
-            <h1>Products in Category {categoryId}</h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <h1 className='font-poppins'>Products in Category {categoryId}</h1>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 font-poppins">
                 {products.map(product => (
                     <div key={product.id} className="product-card p-4 bg-white shadow-md">
                         <h2 className="text-lg font-bold">{product.name}</h2>

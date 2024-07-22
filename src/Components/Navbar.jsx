@@ -20,10 +20,10 @@ const Navbar = () => {
                 </div>
                 <div className='flex items-center float-to-right'>
                     <ul className='flex gap-8 font-bold text-lg mr-14'>
-                        <Link to='/' exact className={`cursor-pointer hover:text-red-600 pl-2 ${isActive('/') ? "text-red-500 border-l-2 border-red-500" : "text-white"}`}>HOME</Link>
-                        <Link to='/product' exact className={`cursor-pointer hover:text-red-600 pl-2 ${isActive('/product') ? "text-red-500 border-l-2 border-red-500" : "text-white"}`}>PRODUCTS</Link>
-                        <Link to='/about-us' className={`cursor-pointer hover:text-red-600 pl-2 ${isActive('/about-us') ? "text-red-500 border-l-2 border-red-500" : "text-white"}`}>ABOUT US</Link>
-                        <Link to='/contact-us' className={`cursor-pointer hover:text-red-600 pl-2 ${isActive('/contact-us') ? "text-red-500 border-l-2 border-red-500" : "text-white"}`}>CONTACT US</Link>
+                        <Link to='/' exact className={`cursor-pointer hover:text-red-600 pl-2 font-poppins ${isActive('/') ? "text-red-500 border-l-2 border-red-500" : "text-white"}`}>HOME</Link>
+                        <Link to='/product' exact className={`cursor-pointer hover:text-red-600 pl-2 font-poppins ${isActive('/product') ? "text-red-500 border-l-2 border-red-500" : "text-white"}`}>PRODUCTS</Link>
+                        <Link to='/about-us' className={`cursor-pointer hover:text-red-600 pl-2 font-poppins ${isActive('/about-us') ? "text-red-500 border-l-2 border-red-500" : "text-white"}`}>ABOUT US</Link>
+                        <Link to='/contact-us' className={`cursor-pointer hover:text-red-600 pl-2 font-poppins ${isActive('/contact-us') ? "text-red-500 border-l-2 border-red-500" : "text-white"}`}>CONTACT US</Link>
                     </ul>
                     <div className='flex items-center gap-5'>
                         <Link to='/cart'>

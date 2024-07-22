@@ -31,24 +31,24 @@ const ProductDescription = ({ product }) => {
 
   return (
     <div className="w-full">
-      <h1 className="text-2xl font-bold mb-3">{product.name}</h1>
+      <h1 className="text-2xl font-bold mb-3 font-poppins">{product.name}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <img src={product.image} alt={product.name} className="w-full h-96 object-cover rounded" />
         <div>
-          <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
-          <p className="text-gray-600 mb-4">${formatPrice(product.price)}</p>
+          <h2 className="text-xl font-semibold mb-2 font-poppins">{product.name}</h2>
+          <p className="text-gray-600 mb-4 font-poppins">${formatPrice(product.price)}</p>
 
           {/* Toggle Buttons */}
           <div className="flex mb-4">
             <button
               onClick={() => setView('description')}
-              className={`py-2 px-4 ${view === 'description' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} rounded-l focus:outline-none`}
+              className={`py-2 px-4 font-poppins ${view === 'description' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} rounded-l focus:outline-none`}
             >
               Description
             </button>
             <button
               onClick={() => setView('specifications')}
-              className={`py-2 px-4 ${view === 'specifications' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} rounded-r focus:outline-none`}
+              className={`py-2 px-4 font-poppins ${view === 'specifications' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} rounded-r focus:outline-none`}
             >
               Specifications
             </button>
@@ -63,7 +63,7 @@ const ProductDescription = ({ product }) => {
                 {product.specifications && product.specifications.length > 0 ? (
                   product.specifications.map((spec, index) => (
                     <li key={index} className="mb-2">
-                      <span className="font-semibold">{spec.name}:</span> {spec.value}
+                      <span className="font-semibold font-poppins">{spec.name}:</span> {spec.value}
                     </li>
                   ))
                 ) : (
@@ -96,7 +96,7 @@ const ProductDescription = ({ product }) => {
           </div>
           <button
             onClick={handleAddToCart}
-            className="bg-blue-500 text-white py-2 px-4 rounded"
+            className="bg-blue-500 font-poppins text-white py-2 px-4 rounded"
           >
             Add to Cart
           </button>
@@ -105,7 +105,7 @@ const ProductDescription = ({ product }) => {
       
       {/* Notification Message */}
       {showMessage && (
-        <div className="fixed top-4 left-4 bg-green-500 text-white py-2 px-4 rounded shadow-lg">
+        <div className="fixed top-4 font-poppins left-4 bg-green-500 text-white py-2 px-4 rounded shadow-lg">
           Added to Cart
         </div>
       )}
