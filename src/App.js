@@ -28,9 +28,9 @@ import EditPassword from './Components/EditPassword';
 function BackgroundImages() {
   //const location = useLocation();
 
-  {/*const isActive = (path) => {
+  /*const isActive = (path) => {
     return location.pathname === path;
-  };*/}
+  };*/
 
   return (
     <div className='absolute opacity-25'>
