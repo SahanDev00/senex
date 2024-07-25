@@ -4,7 +4,6 @@ import { FaUserLarge } from 'react-icons/fa6';
 import { Link, useLocation } from 'react-router-dom';
 import { CartContext } from '../Components/CartContext'; // Adjust the path as needed
 import { IoClose, IoMenu } from 'react-icons/io5';
-import Sidebar from './Sidebar';
 import Sidebar2 from './Sidebar2';
 
 const Navbar = () => {

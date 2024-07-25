@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from "./Components/Navbar";
 import About from './Pages/About';
 import Contact from './Pages/Contact';
@@ -11,8 +11,8 @@ import Footer from './Components/Footer';
 import Home from './Pages/Home';
 import Product from './Pages/Product';
 import bgPic from "./Assets/Images/background1.jpg"
-import bgPic2 from "./Assets/Images/Background2.jpg"
-import bgPic3 from "./Assets/Images/farcry.jpg"
+//import bgPic2 from "./Assets/Images/Background2.jpg"
+//import bgPic3 from "./Assets/Images/farcry.jpg"
 import Login from './Pages/Login';
 import ProductDescription from './Components/ProductDescription';
 import Cart from './Components/Cart';
@@ -26,11 +26,11 @@ import EditPassword from './Components/EditPassword';
 
 
 function BackgroundImages() {
-  const location = useLocation();
+  //const location = useLocation();
 
-  const isActive = (path) => {
+  {/*const isActive = (path) => {
     return location.pathname === path;
-  };
+  };*/}
 
   return (
     <div className='absolute opacity-25'>

@@ -99,7 +99,7 @@ const SearchResults = () => {
       
       {/* Notification message */}
       {notification && (
-        <div className="fixed bottom-4 right-4 bg-green-500 text-white py-2 px-4 rounded shadow-lg z-50">
+        <div className="fixed bottom-4 right-4 bg-green-500 text-white md:py-2 md:px-4 md:text-[16px] text-sm py-1 px-2 rounded shadow-lg z-50">
           {notification}
         </div>
       )}

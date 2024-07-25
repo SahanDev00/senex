@@ -1,16 +1,14 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Categories } from '../products';
 import { RiArrowDropRightLine } from "react-icons/ri";
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { SearchContext } from '../SearchContext';
 
 
 const Sidebar2 = () => {
   const { clearSearchQuery } = useContext(SearchContext);
-  const location = useLocation(); // Get the current location
 
   const [collapsedSections, setCollapsedSections] = useState({});
-  const [selectedSubCategory, setSelectedSubCategory] = useState(null); // State for selected subcategory
 
   const toggleCollapse = (section) => {
     setCollapsedSections((prev) => {
@@ -27,19 +25,9 @@ const Sidebar2 = () => {
   
   const handleSubCategoryClick = (subCategory) => {
     clearSearchQuery();
-    setSelectedSubCategory(subCategory);
   };
 
-  const handleCloseFilterSection = () => {
-    setSelectedSubCategory(null);
-  };
 
-  useEffect(() => {
-    // Close the filter section if the path is '/product'
-    if (location.pathname === '/product') {
-      handleCloseFilterSection();
-    }
-  }, [location.pathname]);
 
   return (
     <div className="font-poppins w-full h-screen">

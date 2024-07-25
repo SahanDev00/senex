@@ -4,7 +4,6 @@ import { Categories } from '../products';
 import { SearchContext } from '../SearchContext';
 import ProductDescription from './ProductDescription';
 import { CartContext } from '../Components/CartContext'; // Import CartContext
-import Sidebar2 from './Sidebar2'; // Import Sidebar2 component
 import FilterSection2 from './FilterSection2';
 
 const ProductsPage = () => {
@@ -111,7 +110,7 @@ const ProductsPage = () => {
   
       {/* Notification message */}
       {notification && (
-        <div className="fixed bottom-4 right-4 bg-green-500 text-white py-2 px-4 rounded shadow-lg z-50">
+        <div className="fixed bottom-4 right-4 bg-green-500 text-white md:py-2 md:px-4 md:text-[16px] text-sm py-1 px-2 rounded shadow-lg z-50">
           {notification}
         </div>
       )}

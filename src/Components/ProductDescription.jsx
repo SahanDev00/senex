@@ -42,13 +42,13 @@ const ProductDescription = ({ product }) => {
           <div className="flex mb-4">
             <button
               onClick={() => setView('description')}
-              className={`py-2 px-4 font-poppins ${view === 'description' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} rounded-l focus:outline-none`}
+              className={`md:py-2 md:px-4 md:text-[16px] text-sm py-1 px-2 font-poppins ${view === 'description' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} rounded-l focus:outline-none`}
             >
               Description
             </button>
             <button
               onClick={() => setView('specifications')}
-              className={`py-2 px-4 font-poppins ${view === 'specifications' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} rounded-r focus:outline-none`}
+              className={`md:py-2 md:px-4 md:text-[16px] text-sm py-1 px-2 font-poppins ${view === 'specifications' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'} rounded-r focus:outline-none`}
             >
               Specifications
             </button>
@@ -57,17 +57,17 @@ const ProductDescription = ({ product }) => {
           {/* Content Area */}
           <div className="mb-4">
             {view === 'description' ? (
-              <p>{product.description}</p>
+              <p className="md:text-[16px] text-sm">{product.description}</p>
             ) : (
               <ul>
                 {product.specifications && product.specifications.length > 0 ? (
                   product.specifications.map((spec, index) => (
                     <li key={index} className="mb-2">
-                      <span className="font-semibold font-poppins">{spec.name}:</span> {spec.value}
+                      <span className="font-semibold font-poppins md:text-[16px] text-sm">{spec.name}:</span> {spec.value}
                     </li>
                   ))
                 ) : (
-                  <p>No specifications available.</p>
+                  <p className='md:text-[16px] text-sm'>No specifications available.</p>
                 )}
               </ul>
             )}
@@ -105,7 +105,7 @@ const ProductDescription = ({ product }) => {
       
       {/* Notification Message */}
       {showMessage && (
-        <div className="fixed top-4 font-poppins left-4 bg-green-500 text-white py-2 px-4 rounded shadow-lg">
+        <div className="fixed top-4 font-poppins left-4 bg-green-500 text-white md:py-2 md:px-4 md:text-[16px] text-sm py-1 px-2 rounded shadow-lg">
           Added to Cart
         </div>
       )}
