@@ -6,7 +6,7 @@ import pic3 from "../Assets/Images/monitor.webp"
 const Cards = () => {
   return (
     /* Special Offers */
-    <div className=' w-full md:w-[91%] grid-cols-1 grid lg:grid-cols-3 items-center mt-12 sm:mt-16 lg:mt-14 gap-3'>
+    <div className=' w-full md:w-[91%] lxl:w-[87%] mxl:w-[91%] grid-cols-1 grid lg:grid-cols-3 items-center mt-12 sm:mt-16 lg:mt-14  gap-3'>
         <div className='w-[320px] flex  md:w-[450px] lg:w-[250px] xl:w-[300px] 2xl:w-[380px] rounded-2xl mx-auto'>
             <div className='relative w-full rounded-lg h-[250px] flex items-center border-white bg-white'>
                 <img className='pt-2 h-[230px] mx-auto object-cover' src={pic} alt="" />
