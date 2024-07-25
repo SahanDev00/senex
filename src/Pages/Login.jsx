@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import loginPic from '../Assets/Images/login.jpg';
-import signUpPic from '../Assets/Images/signup.jpg';
+import loginPic from '../Assets/Images/login.webp';
+import signUpPic from '../Assets/Images/signup.webp';
 import Countries from '../Components/Countries';
 
 const Login = () => {

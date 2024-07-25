@@ -1,5 +1,5 @@
 import React from 'react'
-import pic from '../Assets/Images/computer.jpg'
+import pic from '../Assets/Images/computer.webp'
 
 const OrderDetails = () => {
 

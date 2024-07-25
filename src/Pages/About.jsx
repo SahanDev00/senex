@@ -1,13 +1,13 @@
 import React from 'react'
-import ComputerPic1 from "../Assets/Images/Computer1.png"
-import ComputerPic2 from "../Assets/Images/Computer2.png"
-import KeyboardPic from "../Assets/Images/keyboard.png"
-import HeadsetPic from "../Assets/Images/headset.png"
+import ComputerPic1 from "../Assets/Images/Computer1.webp"
+import ComputerPic2 from "../Assets/Images/Computer2.webp"
+import KeyboardPic from "../Assets/Images/keyboard.webp"
+import HeadsetPic from "../Assets/Images/headset.webp"
 
 
 const About = () => {
   return (
-    <div className='w-full h-[850px] sm:h-[87vh] relative mx-auto '>
+    <div className='w-full lg:h-[840px] xl:h-[740px] 2xl:h-[830px] md:h-[850px] sm:h-[87vh] relative mx-auto '>
       <div className='w-full h-full absolute z-10'>
         <div className='absolute mt-[120px] md:mx-10'>
           <img className='w-[200px] md:w-[270px] lg:w-[380px] float-to-left hidden xl:block' src={ComputerPic1} alt="" />

@@ -1,5 +1,5 @@
 import React from 'react'
-import computer from "../Assets/Images/computer.jpg"
+import computer from "../Assets/Images/computer.webp"
 import { Link } from 'react-router-dom'
 
 const HomeCategories = () => {

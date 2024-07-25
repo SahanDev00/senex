@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import HeroPic from "../Assets/Images/Hero.png"
+import HeroPic from "../Assets/Images/Hero.webp"
 import Searchbar2 from "../Components/Searchbar2"
 import { SearchContext } from '../SearchContext';
 import { Link } from 'react-router-dom';
