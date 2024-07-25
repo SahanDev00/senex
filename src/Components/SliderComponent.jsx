@@ -43,20 +43,20 @@ const SliderComponent = () => {
   };
 
   return (
-    <div className='mt-5 w-[330px] mx-auto ml-5 lg:ml-0 2xl:ml-7 sm:ml-6 md:ml-8 sm:w-[600px] md:w-[700px] lg:w-[750px] xl:w-[950px] mxl:w-[940px] 2xl:w-[1100px] 3xl:w-[1320px] h-[200px] sm:h-[400px] font-poppins rounded-lg cursor-grab active:cursor-grabbing'>
-      <Slider {...settings} className='w-full h-[200px] sm:h-[400px]'>
+    <div className='mt-5 w-[330px] mx-auto ml-5 lg:ml-0 2xl:ml-7 sm:ml-6 md:ml-8 sm:w-[600px] md:w-[700px] lg:w-[750px] xl:w-[950px] mxl:w-[940px] 2xl:w-[1100px] 3xl:w-[1320px] h-[200px] sm:h-[400px] mxl:h-[250px] xl:h-[400px] 2xl:h-[400px] font-poppins rounded-lg cursor-grab active:cursor-grabbing'>
+      <Slider {...settings} className='w-full h-[200px] sm:h-[400px] mxl:h-[250px] xl:h-[400px] 2xl:h-[400px]'>
           {details.map((detail, index) => (
             <div key={index}>
-              <div className='absolute z-10 mt-10 sm:mt-24 ml-5 sm:ml-14 w-[350px]'>
-                <p className={`font-semibold text-[19px] ${currentSlide === index ? 'float-up' : ''}`} style={{ color: detail.textColour }}>{detail.text}</p>
-                <h1 className={`text-2xl sm:text-6xl font-bold text-white drop-shadow-lg ${currentSlide === index ? 'float-to-right' : ''}`}>
+              <div className='absolute z-10 mt-10 sm:mt-24 mxl:mt-8 xl: ml-5 sm:ml-14 w-[350px]'>
+                <p className={`font-semibold text-[19px] mxl:text-sm 2xl:text-[19px] ${currentSlide === index ? 'float-up' : ''}`} style={{ color: detail.textColour }}>{detail.text}</p>
+                <h1 className={`text-2xl sm:text-6xl mxl:text-5xl 2xl:text-6xl font-bold text-white drop-shadow-lg ${currentSlide === index ? 'float-to-right' : ''}`}>
                   {detail.heading} <span style={{ color: detail.textColour }}>{detail.headingSpan}</span>
                 </h1>
                 <button className={`sm:px-11 px-8 py-3 rounded-xl mt-4 text-sm sm:text-lg font-semibold text-white hover:scale-105 duration-300 active:scale-95 ${currentSlide === index ? 'float-up' : ''}`} style={{ backgroundColor: detail.btnColour }}>
                   {detail.btnText}
                 </button>
               </div>
-              <div className='w-full h-[200px] sm:h-[400px] rounded-lg'>
+              <div className='w-full h-[200px] sm:h-[400px] xl:h-[400px] mxl:h-[250px] rounded-lg 2xl:h-[400px]'>
                   <img src={detail.Pic} alt="Banner" className='w-full h-full object-cover rounded-lg' />
               </div>
             </div>
