@@ -4,6 +4,8 @@ import { Categories } from '../products';
 import { SearchContext } from '../SearchContext';
 import ProductDescription from './ProductDescription';
 import { CartContext } from '../Components/CartContext'; // Import CartContext
+import Sidebar2 from './Sidebar2'; // Import Sidebar2 component
+import FilterSection2 from './FilterSection2';
 
 const ProductsPage = () => {
   const { searchQuery, clearSearchQuery } = useContext(SearchContext);
@@ -11,6 +13,7 @@ const ProductsPage = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [notification, setNotification] = useState(''); // State for notification message
   const { addToCart } = useContext(CartContext); // Use CartContext
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State for sidebar visibility
 
   // Clear the search query when navigating to a new category
   useEffect(() => {
@@ -58,20 +61,28 @@ const ProductsPage = () => {
     }, 3000);
   };
 
+  // Function to toggle the sidebar visibility
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
-    <div className="w-[91%] p-4 relative font-poppins">
+    <div className="xl:w-[91%] p-4 relative font-poppins">
       <h1 className="text-2xl text-white font-bold mb-3">{subCategoryName} Products</h1>
       {products.length > 0 ? (
         <div>
-          <p className="mb-2 text-white">{products.length} products found</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <p className="text-white md:mb-2">{products.length} products found</p>
+          <div className='w-[200px] mb-2 h-[50px] flex md:hidden items-center'>
+            <button className='px-4 py-1 text-white border' onClick={toggleSidebar}>Filters</button>
+          </div>
+          <div className="grid grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
             {currentProducts.map((product) => (
               <div key={product.id} className="border bg-black/40 hover:scale-105 duration-300 m-1 p-5 rounded hover:shadow-lg shadow cursor-pointer" onClick={() => setSelectedProduct(product)}>
                 <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4" />
-                <h2 className="text-xl text-white text-center font-semibold">{product.name}</h2>
+                <h2 className="md:text-xl text-white text-center font-semibold">{product.name}</h2>
                 <p className="text-white text-center ">${Number(product.price).toFixed(2)}</p> {/* Ensure price is formatted */}
                 <button
-                  className="mt-2 bg-red-500 flex mx-auto text-white py-2 px-4 rounded"
+                  className="mt-2 text-xs md:text-sm bg-red-500 flex mx-auto text-white py-2 px-4 rounded"
                   onClick={(e) => {
                     e.stopPropagation(); // Prevent the modal from opening
                     handleAddToCart(product); // Add product to cart
@@ -97,7 +108,7 @@ const ProductsPage = () => {
       ) : (
         <p className='text-white'>0 products found</p>
       )}
-
+  
       {/* Notification message */}
       {notification && (
         <div className="fixed bottom-4 right-4 bg-green-500 text-white py-2 px-4 rounded shadow-lg z-50">
@@ -116,6 +127,21 @@ const ProductsPage = () => {
               &times;
             </button>
             <ProductDescription product={selectedProduct} />
+          </div>
+        </div>
+      )}
+
+      {/* Sidebar for Filters */}
+      {isSidebarOpen && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="rounded-lg p-8 w-3/4 max-w-4xl relative border bg-black/80">
+            <button
+              className="absolute top-4 right-4 text-xl text-white hover:text-gray-600"
+              onClick={toggleSidebar}
+            >
+              &times;
+            </button>
+            <FilterSection2 />
           </div>
         </div>
       )}

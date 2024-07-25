@@ -30,7 +30,7 @@ const CountryDropdown = () => {
       <select 
         id="country" 
         name="country" 
-        className='w-[316px] cursor-pointer h-12 mx-auto rounded-lg pl-3 py-1 border-red-500 border-2 mb-2 mt-1' 
+        className='w-full cursor-pointer h-12 mx-auto rounded-lg pl-3 py-1 border-red-500 border-2 mb-2 mt-1' 
         required
       >
         <option value="" disabled selected>Select your country</option>

@@ -5,6 +5,7 @@ import { Categories } from '../products';
 import { SearchContext } from '../SearchContext';
 import { CartContext } from '../Components/CartContext';
 import ProductDescription from './ProductDescription';
+import FilterSection2 from './FilterSection2';
 
 const SearchResults = () => {
   const location = useLocation();
@@ -12,6 +13,7 @@ const SearchResults = () => {
   const { addToCart } = useContext(CartContext);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [notification, setNotification] = useState(''); // State for notification message
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State for sidebar visibility
 
   const searchParams = new URLSearchParams(location.search);
   const query = searchParams.get('q') || searchQuery;
@@ -49,22 +51,31 @@ const SearchResults = () => {
     }, 3000);
   };
 
+  
+  // Function to toggle the sidebar visibility
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
-    <div className="w-[91%] p-4 relative font-poppins">
+    <div className=" sm:w-[97%] md:w-[94%] lg:w-[91%] p-4 relative font-poppins">
       {filteredProducts.length === 0 ? (
         <NotFound searchTerm={query} />
       ) : (
         <div>
           <h2 className="text-2xl ml-2 font-bold mb-2 text-white">Search Results for "{query}"</h2>
           <p className='ml-2 mt-1 mb-3 text-white'>{filteredProducts.length} products found</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className='w-[200px] mb-2 h-[50px] flex md:hidden items-center'>
+            <button className='px-4 py-1 text-white border' onClick={toggleSidebar}>Filters</button>
+          </div>
+          <div className="grid grid-cols-2 2xl:grid-cols-4 xl:grid-cols-3 gap-6">
             {currentProducts.map((product, index) => (
               <div key={index} className="border bg-black/40 border-gray-500 hover:scale-105 duration-300 m-1 p-4 rounded hover:shadow-lg shadow cursor-pointer" onClick={() => setSelectedProduct(product)}>
-                <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4" />
-                <h2 className="text-xl text-center text-white font-semibold">{product.name}</h2>
+                <img src={product.image} alt={product.name} className="md:w-full md:h-48 md:object-cover mb-4" />
+                <h2 className=" md:text-xl text-center text-white font-semibold">{product.name}</h2>
                 <p className=" text-center text-white">${Number(product.price).toFixed(2)}</p> {/* Ensure price is formatted */}
                 <button
-                  className="mt-2 flex mx-auto bg-red-500 text-white py-2 px-4 rounded"
+                  className="mt-2 text-xs md:text-sm flex mx-auto bg-red-500 text-white py-2 px-4 rounded"
                   onClick={(e) => handleAddToCart(product, e)} // Handle Add to Cart
                 >
                   Add to Cart
@@ -107,6 +118,22 @@ const SearchResults = () => {
           </div>
         </div>
       )}
+
+      {/* Sidebar for Filters */}
+      {isSidebarOpen && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="rounded-lg p-8 w-3/4 max-w-4xl relative border bg-black/80">
+            <button
+              className="absolute top-4 right-4 text-xl text-white hover:text-gray-600"
+              onClick={toggleSidebar}
+            >
+              &times;
+            </button>
+            <FilterSection2 />
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };

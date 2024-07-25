@@ -13,13 +13,13 @@ const Product = () => {
 
   return (
     <div>
-      <div className="flex w-[99%] mx-auto mb-14 relative">
+      <div className="flex w-[99%]  mx-auto mb-14 relative">
         <div className="">
             <Sidebar />
         </div>
         <div className="flex-1 flex flex-col">
             <Searchbar onSearch={setSearchQuery} products={[]}/>
-            <div className="  ml-6">
+            <div className="md:ml-6">
                 <Outlet />
             </div>
         </div>

@@ -25,7 +25,7 @@ const Searchbar = ({ onSearch }) => {
   };
 
   return (
-    <div className='w-[89%] ml-6 mt-4 flex items-center h-[50px]'>
+    <div className='w-[320px] sm:w-[650px] md:w-[68%] mx-auto justify-center lg:w-[80%] xl:w-[65%] 2xl:w-[89%] ml-6 mt-4 flex items-center h-[50px]'>
       <form onSubmit={handleSubmit} className='w-full h-full flex'>
         <button type='submit' className='w-[50px] h-[50px] rounded-l-md bg-red-600 flex items-center hover:cursor-pointer'>
             <IoSearch size={25} className='mx-auto text-white' />

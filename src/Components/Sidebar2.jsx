@@ -3,9 +3,9 @@ import { Categories } from '../products';
 import { RiArrowDropRightLine } from "react-icons/ri";
 import { Link, useLocation } from 'react-router-dom';
 import { SearchContext } from '../SearchContext';
-import FilterSection from './FilterSection'; // Import FilterSection
 
-const Sidebar = () => {
+
+const Sidebar2 = () => {
   const { clearSearchQuery } = useContext(SearchContext);
   const location = useLocation(); // Get the current location
 
@@ -42,16 +42,16 @@ const Sidebar = () => {
   }, [location.pathname]);
 
   return (
-    <div className="lg:flex font-poppins hidden ">
-      <div className=' lg:w-[200px] xl:w-[250px] border-red-600 border ml-16 xl:ml-36 mt-4 h-[780px] overflow-y-scroll bg-white'>
-        <div className='w-full h-[50px] border bg-red-600 border-white'>
+    <div className="font-poppins w-full h-screen">
+      <div className='w-full  border-red-600 border xl:ml-36 h-screen overflow-y-scroll bg-black text-white'>
+        <div className='w-full h-[50px] border bg-red-700 border-white'>
           <h1 className='flex items-center justify-center text-white w-full h-full uppercase font-semibold text-lg'>Categories</h1>
         </div>
         <div className='my-4 ml-3 '>
           <ul>
             {Categories.map((category, index) => (
               <li key={index}>
-                <h3 className='flex items-center cursor-pointer mt-1 mb-2 text-sm uppercase' onClick={() => toggleCollapse(category.category)}>
+                <h3 className='flex items-center cursor-pointer mt-1 mb-2 font-semibold text-sm uppercase' onClick={() => toggleCollapse(category.category)}>
                   <RiArrowDropRightLine
                     className={`text-gray-500 transition-transform duration-200 ${
                       collapsedSections[category.category] ? 'rotate-90' : ''
@@ -79,12 +79,8 @@ const Sidebar = () => {
           </ul>
         </div>
       </div>
-      {/* Render FilterSection component if a subcategory is selected */}
-      {selectedSubCategory && (
-        <FilterSection subCategory={selectedSubCategory} onClose={handleCloseFilterSection} />
-      )}
     </div>
   );
 };
 
-export default Sidebar;
+export default Sidebar2;

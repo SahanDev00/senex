@@ -31,7 +31,7 @@ const Orders = () => {
   ];
 
   return (
-    <div className='w-[80%] min-h-[830px] relative mx-auto px-4 py-8 mb-5'>
+    <div className='w-[90%] min-h-[830px] relative mx-auto px-4 py-8 mb-5'>
       <h1 className='text-2xl font-bold mb-5 text-white font-poppins'>Track My Orders</h1>
       <div className='overflow-x-auto'>
         <table className='min-w-full bg-black/70 text-white border border-gray-200'>

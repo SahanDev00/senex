@@ -34,7 +34,7 @@ function BackgroundImages() {
 
   return (
     <div className='absolute opacity-25'>
-      <img className='' src={bgPic} alt="background" />
+      <img className='h-screen object-cover' src={bgPic} alt="background" />
       {/*<img className={`${isActive('/about-us') || isActive('/contact-us') || isActive('/edit-profile') || isActive('/edit-password') || isActive('/order-details') || isActive('/login') || isActive('/orders') || isActive('/cart') || isActive('/profile') || isActive('/checkout') ? 'hidden' : ''}`} src={bgPic2} alt="background2" />
       <img className={`${isActive('/') ? '' : 'hidden'}`} src={bgPic3} alt="background2" />*/}
     </div>
@@ -52,13 +52,13 @@ function App() {
             <Routes>
               <Route index path="/" element={<Home/>}/>
               <Route path="/product" element={<Product/>}>
-              <Route path='/product' element={<>
-                <SliderComponent />
-                <Cards />
-                </>} />
-                <Route path="/product/:productId" element={<ProductDescription />} />
-                <Route path="/product/products/:subCategoryName" element={<ProductsPage />} />
-                <Route path="search" element={<SearchResults />} />
+                <Route path='/product' element={<>
+                  <SliderComponent />
+                  <Cards />
+                  </>} />
+                  <Route path="/product/:productId" element={<ProductDescription />} />
+                  <Route path="/product/products/:subCategoryName" element={<ProductsPage />} />
+                  <Route path="search" element={<SearchResults />} />
               </Route>
               <Route path="/about-us" element={<About/>} />
               <Route path="/contact-us" element={<Contact/>} />

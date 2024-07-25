@@ -6,7 +6,7 @@ const Contact = () => {
     <div className="flex w-full flex-col relative items-center mt-3 h-full">
       {/* Map */}
       <div className="w-full h-[823px]">
-        <h1 className='text-4xl text-white font-bold mt-9 text-center'>
+        <h1 className='text-3xl md:text-4xl text-white font-bold mt-9 text-center'>
           Welcome to <span className='text-4xl font-bold text-red-600 cursor-pointer'>SENƎX</span>
         </h1>
         <p className="text-lg mb-6 font-semibold text-white mt-2 text-center">Find us here:</p>
@@ -27,7 +27,7 @@ const Contact = () => {
       {/*<div className='w-full h-full'>
         <img src={farcry} alt="" className='absolute opacity-40'/>
       </div>*/}
-      <div className=' h-full w-full relative mb-10 grid justify-center grid-cols-1 md:grid-cols-2 mt-16'>
+      <div className=' h-full w-full relative mb-10 grid justify-center grid-cols-1 md:grid-cols-2 mt-6 sm:mt-10 md:mt-16'>
         {/* Form */}
         <div className='border-r-2'>
           <div className='mx-auto w-[80%]'>
@@ -51,7 +51,7 @@ const Contact = () => {
         </div>
 
         {/* Details */}
-        <div>
+        <div className='mt-16 md:mt-0'>
           <div className='mx-auto w-[80%]'>
             <h1 className='text-4xl font-bold mb-5 text-white underline'>Our Store</h1>
             <div className='w-full'>
@@ -59,14 +59,14 @@ const Contact = () => {
                 <h1 className='text-white text-xl font-semibold'>Address</h1>
                 <p className='text-white mt-2'>No 29 UC Shipping Complex<br/>Ja-Ela 11350<br/>Sri Lanka</p>
               </div>
-              <div className='text-white mt-4'>
+              <div className='text-white mt-8 md:mt-4'>
                 <h1 className='text-white text-xl font-semibold mb-2'>Customer Support</h1>
                 <p>HotLine: 0777-300-288</p>
                 <p>Showroom: 011-446-8500</p> 
                 <p>Workshop: 011-467-3950 / 011-419-9941</p>
                 <p>Email: msds.net@live.com</p>
               </div>
-              <div className='text-white w-[50%] mt-4'>
+              <div className='text-white md:w-[50%] mt-8 md:mt-4'>
                 <h1 className='text-white text-xl mb-2 font-semibold'>Hours of Operation</h1>
                 <div className='flex items-center justify-between'>
                   <p>Monday</p>

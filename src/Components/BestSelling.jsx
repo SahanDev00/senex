@@ -6,7 +6,25 @@ import { CartContext } from '../Components/CartContext';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+const CustomDots = ({ dots }) => {
+  const totalDots = dots.length;
+  const currentIndex = dots.findIndex(dot => dot.props.className.includes('slick-active'));
+  const startIndex = Math.max(0, currentIndex - 1);
+  const endIndex = Math.min(totalDots, startIndex + 3);
+  
+  return (
+    <ul className="slick-dots">
+      {dots.slice(startIndex, endIndex).map((dot, index) => (
+        <li key={index} className={dot.props.className}>
+          {dot}
+        </li>
+      ))}
+    </ul>
+  );
+};
+
 const BestSelling = () => {
+
   const [bestSellingItems, setBestSellingItems] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showMessage, setShowMessage] = useState(false);
@@ -48,14 +66,36 @@ const BestSelling = () => {
     speed: 600,
     slidesToShow: 6,
     slidesToScroll: 2,
+    appendDots: dots => <CustomDots dots={dots} />,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1890,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
           dots: true
+        }
+      },
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
         }
       },
       {
@@ -64,21 +104,23 @@ const BestSelling = () => {
           slidesToShow: 1,
           slidesToScroll: 1
         }
-      }
+      },
     ]
   };
+  
 
   return (
-    <div className='w-[95%] h-[50vh] bg-black/30 flex mx-auto mt-10 relative border-gray-500 items-center rounded-xl justify-center'>
+    <div className='w-[95%] bg-black/30 flex mx-auto mt-16 relative border-gray-500 items-center rounded-xl justify-center'>
       <div className='w-[95%] h-[95%]'>
-        <h1 className='font-semibold text-3xl mt-2 text-white font-poppins'>BEST SELLING ITEMS</h1>
+      <p className='flex justify-center uppercase text-sm font-semibold text-white mt-5 font-mono'>Top Products</p>
+        <h1 className='font-semibold text-2xl sm:text-3xl text-center text-white font-poppins'>BEST SELLING ITEMS</h1>
 
-        <div className='mt-4 w-full h-[370px]'>
+        <div className='mt-4 w-[80%] mx-auto sm:w-full h-[370px]'>
           <Slider {...settings}>
             {bestSellingItems.map((product) => (
               <div key={product.id} className='p-4'>
                 <div
-                  className='w-[260px] bg-black/60 hover:scale-105 duration-300 h-[320px] rounded-xl mx-auto p-4 shadow hover:shadow-md border border-gray-500 flex-shrink-0 cursor-pointer'
+                  className='sm:w-[260px]  bg-black/60 hover:scale-105 duration-300 sm:h-[320px] rounded-xl mx-auto p-4 shadow hover:shadow-md border border-gray-500 flex-shrink-0 cursor-pointer'
                   onClick={() => setSelectedProduct(product)}
                 >
                   <img className='w-full h-40 object-cover mb-4 rounded-xl border-white' src={product.image} alt={product.name} />
