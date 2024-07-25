@@ -115,7 +115,7 @@ const Navbar = () => {
                             <ul className='flex-col space-y-3'>
                                 <Link to='/' exact className={`cursor-pointer block hover:text-red-600 pl-1 md:pl-2 font-poppins ${isActive('/') ? "text-red-500 border-l-2 border-red-500" : "text-white"}`}>HOME</Link>
                                 <Link to='/product' exact className={`cursor-pointer block hover:text-red-600 pl-1 md:pl-2 font-poppins ${isActive('/product') ? "text-red-500 border-l-2 border-red-500" : "text-white"}`}>PRODUCTS</Link>
-                                <p onClick={handleNav2} className='cursor-pointer text-white block hover:text-red-600 pl-1 md:pl-2 font-poppins'>Categories</p>
+                                <p onClick={handleNav2} className='cursor-pointer text-white block hover:text-red-600 pl-1 md:pl-2 font-poppins'>CATEGORIES</p>
                                 <Link to='/about-us' className={`cursor-pointer block hover:text-red-600 pl-1 md:pl-2 font-poppins ${isActive('/about-us') ? "text-red-500 border-l-2 border-red-500" : "text-white"}`}>ABOUT US</Link>
                                 <Link to='/contact-us' className={`cursor-pointer block hover:text-red-600 pl-1 md:pl-2 font-poppins ${isActive('/contact-us') ? "text-red-500 border-l-2 border-red-500" : "text-white"}`}>CONTACT US</Link>
                             </ul>
