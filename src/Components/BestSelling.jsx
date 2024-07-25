@@ -80,6 +80,13 @@ const BestSelling = () => {
       {
         breakpoint: 1500,
         settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 1235,
+        settings: {
           slidesToShow: 3,
           slidesToScroll: 1
         }

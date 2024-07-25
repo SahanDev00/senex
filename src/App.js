@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from "./Components/Navbar";
 import About from './Pages/About';
 import Contact from './Pages/Contact';
@@ -26,15 +26,15 @@ import EditPassword from './Components/EditPassword';
 
 
 function BackgroundImages() {
-  //const location = useLocation();
+  const location = useLocation();
 
-  /*const isActive = (path) => {
+  const isActive = (path) => {
     return location.pathname === path;
-  };*/
+  };
 
   return (
     <div className='absolute opacity-25'>
-      <img className='xl:h-full 2xl:h-full mxl:h-[120vh] object-cover' src={bgPic} alt="background" />
+      <img className={` object-cover ${isActive('/') || isActive('/product') || isActive('/contact-us') ? 'h-screen' : 'min-h-[120vh]'}`} src={bgPic} alt="background" />
       {/*<img className={`${isActive('/about-us') || isActive('/contact-us') || isActive('/edit-profile') || isActive('/edit-password') || isActive('/order-details') || isActive('/login') || isActive('/orders') || isActive('/cart') || isActive('/profile') || isActive('/checkout') ? 'hidden' : ''}`} src={bgPic2} alt="background2" />
       <img className={`${isActive('/') ? '' : 'hidden'}`} src={bgPic3} alt="background2" />*/}
     </div>
