@@ -1,5 +1,5 @@
 import React from 'react';
-import farcry from '../Assets/Images/farcry.jpg'
+//import farcry from '../Assets/Images/farcry.jpg'
 
 const Contact = () => {
   return (
