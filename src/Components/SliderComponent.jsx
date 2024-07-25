@@ -43,7 +43,7 @@ const SliderComponent = () => {
   };
 
   return (
-    <div className='mt-5 w-[330px] mx-auto ml-5 lg:ml-0 2xl:ml-7 sm:ml-6 md:ml-8 sm:w-[600px] md:w-[700px] lg:w-[750px] xl:w-[950px] mxl:w-[900px] 2xl:w-[1100px] 3xl:w-[1320px] h-[200px] sm:h-[400px] font-poppins rounded-lg cursor-grab active:cursor-grabbing'>
+    <div className='mt-5 w-[330px] mx-auto ml-5 lg:ml-0 2xl:ml-7 sm:ml-6 md:ml-8 sm:w-[600px] md:w-[700px] lg:w-[750px] xl:w-[950px] mxl:w-[940px] 2xl:w-[1100px] 3xl:w-[1320px] h-[200px] sm:h-[400px] font-poppins rounded-lg cursor-grab active:cursor-grabbing'>
       <Slider {...settings} className='w-full h-[200px] sm:h-[400px]'>
           {details.map((detail, index) => (
             <div key={index}>
