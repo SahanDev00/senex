@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { CartContext } from '../Components/CartContext'; // Import CartContext
+import BasicDemo from './BasicDemo';
 
 const ProductDescription = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
@@ -33,7 +34,7 @@ const ProductDescription = ({ product }) => {
     <div className="w-full">
       <h1 className="text-2xl font-bold mb-3 font-poppins">{product.name}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <img src={product.image} alt={product.name} className="md:w-full md:h-96 md:object-cover rounded" />
+        <BasicDemo product={product} />
         <div>
           <h2 className="text-xl font-semibold mb-2 font-poppins">{product.name}</h2>
           <p className="text-gray-600 mb-4 font-poppins">${formatPrice(product.price)}</p>

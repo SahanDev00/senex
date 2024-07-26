@@ -17,7 +17,12 @@ export const Categories = [
               price: '1000', 
               image: computer,
               description: "High-performance laptop with an Intel i7 processor, 16GB RAM, and 512GB SSD.",
-              specs: "Intel i7, 16GB RAM, 512GB SSD, 15.6-inch display"
+              specs: "Intel i7, 16GB RAM, 512GB SSD, 15.6-inch display",
+              SubImage: [
+                  { src: cmos, alt: 'Sub Image 1' },
+                  { src: laptop, alt: 'Sub Image 2' },
+                  { src: monitor, alt: 'Sub Image 3' }
+              ],
             },
             { 
               id: 2, 
@@ -25,7 +30,14 @@ export const Categories = [
               price: '1200', 
               image: computer,
               description: "Premium laptop for gaming and productivity. Features RGB keyboard and NVIDIA GTX 1660.",
-              specs: "Intel i7, 16GB RAM, 1TB SSD, NVIDIA GTX 1660, 17.3-inch display"
+              specs: "Intel i7, 16GB RAM, 1TB SSD, NVIDIA GTX 1660, 17.3-inch display",
+              SubImage: [
+                { src: cmos, alt: 'Sub Image 1' },
+                { src: laptop, alt: 'Sub Image 2' },
+                { src: cmos, alt: 'Sub Image 1' },
+                { src: laptop, alt: 'Sub Image 2' },
+                { src: monitor, alt: 'Sub Image 3' }
+            ],
             }
           ]
         },

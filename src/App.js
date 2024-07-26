@@ -23,6 +23,7 @@ import Orders from './Components/Orders';
 import OrderDetails from './Components/OrderDetails';
 import EditProfile from './Components/EditProfile';
 import EditPassword from './Components/EditPassword';
+import { PrimeReactProvider } from 'primereact/api';
 
 
 function BackgroundImages() {
@@ -43,39 +44,41 @@ function BackgroundImages() {
 
 function App() {
   return (
-    <SearchProvider>
-      <CartProvider>
-        <div className="App bg-black">
-          <Router>
-            <BackgroundImages/>
-            <Navbar/>
-            <Routes>
-              <Route index path="/" element={<Home/>}/>
-              <Route path="/product" element={<Product/>}>
-                <Route path='/product' element={<>
-                  <SliderComponent />
-                  <Cards />
-                  </>} />
-                  <Route path="/product/:productId" element={<ProductDescription />} />
-                  <Route path="/product/products/:subCategoryName" element={<ProductsPage />} />
-                  <Route path="search" element={<SearchResults />} />
-              </Route>
-              <Route path="/about-us" element={<About/>} />
-              <Route path="/contact-us" element={<Contact/>} />
-              <Route path="/login" element={<Login/>} />
-              <Route path="/cart" element={<Cart/>} />
-              <Route path="/checkout" element={<Checkout/>} />
-              <Route path="/profile" element={<Profile/>} />
-              <Route path="/orders" element={<Orders/>} />
-              <Route path="/order-details" element={<OrderDetails/>} />
-              <Route path="/edit-profile" element={<EditProfile/>} />
-              <Route path="/edit-password" element={<EditPassword/>} />
-            </Routes>
-            <Footer/>
-          </Router>
-        </div>
-      </CartProvider>
-    </SearchProvider>
+    <PrimeReactProvider>
+      <SearchProvider>
+        <CartProvider>
+          <div className="App bg-black">
+            <Router>
+              <BackgroundImages/>
+              <Navbar/>
+              <Routes>
+                <Route index path="/" element={<Home/>}/>
+                <Route path="/product" element={<Product/>}>
+                  <Route path='/product' element={<>
+                    <SliderComponent />
+                    <Cards />
+                    </>} />
+                    <Route path="/product/:productId" element={<ProductDescription />} />
+                    <Route path="/product/products/:subCategoryName" element={<ProductsPage />} />
+                    <Route path="search" element={<SearchResults />} />
+                </Route>
+                <Route path="/about-us" element={<About/>} />
+                <Route path="/contact-us" element={<Contact/>} />
+                <Route path="/login" element={<Login/>} />
+                <Route path="/cart" element={<Cart/>} />
+                <Route path="/checkout" element={<Checkout/>} />
+                <Route path="/profile" element={<Profile/>} />
+                <Route path="/orders" element={<Orders/>} />
+                <Route path="/order-details" element={<OrderDetails/>} />
+                <Route path="/edit-profile" element={<EditProfile/>} />
+                <Route path="/edit-password" element={<EditPassword/>} />
+              </Routes>
+              <Footer/>
+            </Router>
+          </div>
+        </CartProvider>
+      </SearchProvider>
+    </PrimeReactProvider>
   );
 }
 
