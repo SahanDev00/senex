@@ -15,7 +15,7 @@ module.exports = {
       'mxl': '1366px',
       'lxl': '1480px',
       '2xl': '1536px',
-      '3xl': '1600px',
+      '3xl': '2048px',
     },
     fontFamily: {
       poppins: ['Poppins', 'sans-serif'],
