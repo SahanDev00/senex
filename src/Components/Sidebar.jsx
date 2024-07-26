@@ -43,7 +43,7 @@ const Sidebar = () => {
 
   return (
     <div className="lg:flex font-poppins hidden ">
-      <div className=' lg:w-[200px] xl:w-[250px] mxl:h-[625px] 2xl:w-[250px] border-red-600 border ml-10 xl:ml-10 mxl:ml-16 lxl:ml-32 2xl:ml-36 mt-4 h-[780px] 2xl:h-[780px] overflow-y-auto bg-white'>
+      <div className=' lg:w-[200px] xl:w-[200px] mxl:h-[570px] 2xl:w-[250px] border-red-600 border md:ml-20 lg:ml-10 xl:ml-10 mxl:ml-16 lxl:ml-32 2xl:ml-36 mt-4 h-[780px] lg:h-[600px] xl:h-[550px]  2xl:h-[780px] overflow-y-auto bg-white'>
         <div className='w-full h-[50px] border bg-red-600 border-white'>
           <h1 className='flex items-center justify-center text-white w-full h-full uppercase font-semibold text-lg'>Categories</h1>
         </div>

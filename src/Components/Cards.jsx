@@ -6,27 +6,27 @@ import pic3 from "../Assets/Images/monitor.webp"
 const Cards = () => {
   return (
     /* Special Offers */
-    <div className=' w-full md:w-[91%] lxl:w-[87%] mxl:w-[91%] grid-cols-1 grid lg:grid-cols-3 items-center mt-12 sm:mt-16 lg:mt-14  gap-3'>
-        <div className='w-[320px] flex  md:w-[450px] lg:w-[250px] xl:w-[300px] 2xl:w-[380px] rounded-2xl mx-auto'>
-            <div className='relative w-full rounded-lg h-[250px] flex items-center border-white bg-white'>
-                <img className='pt-2 h-[230px] mx-auto object-cover' src={pic} alt="" />
-                <button className='absolute w-full font-poppins h-full bg-black/50 border-white border-2 rounded-lg font-bold text-white sm:text-xl text-lg lg:text-2xl xl:text-3xl hover:text-[32px] duration-300 ease-in-out hover:shadow-lg'>SPECIAL OFFERS</button>
+    <div className=' w-[90%] sm:w-[90%] mx-auto md:mx-0 md:w-[97%] lg:w-[95%] lxl:w-[87%] mxl:w-[95%] 2xl:w-[93%] grid-cols-1 grid lg:grid-cols-3 items-center mt-12 sm:mt-16 lg:mt-12 gap-3'>
+        <div className=' w-[330px] xs:w-[370px] sm:w-[550px] ssm:w-[480px] md:w-[650px] lg:w-[220px] xl:w-[300px] 2xl:w-[440px] rounded-2xl mx-auto'>
+            <div className='relative w-full rounded-lg h-[150px] xs:h-[170px] sm:h-[250px] lg:h-[200px] xl:h-[200px] mxl:h-[200px] flex items-center bg-white'>
+                <img className='pt-2 h-full mx-auto object-cover' src={pic} alt="" />
+                <button className='absolute w-full font-poppins h-full bg-black/50  border-2 rounded-lg font-bold text-white sm:text-xl text-lg lg:text-2xl xl:text-3xl hover:scale-105 duration-300 ease-in-out hover:shadow-lg'>SPECIAL OFFERS</button>
             </div>
         </div>
 
         {/* New Arrivals */}
-        <div className='w-[320px] md:w-[450px] lg:w-[250px] xl:w-[250px] 2xl:w-[300px] mx-auto'>
-            <div className='relative w-full rounded-lg h-[250px] flex items-center bg-white'>
-                <img className='pt-2 h-[230px] mx-auto object-cover' src={pic2} alt="" />
-                <button className='absolute w-full font-poppins h-full bg-black/50 rounded-lg font-bold text-white border-2 sm:text-xl text-lg lg:text-2xl xl:text-3xl hover:text-[32px] duration-300 ease-in-out hover:shadow-lg'>NEW ARRIVALS</button>
+        <div className='w-[330px] xs:w-[370px] sm:w-[550px] ssm:w-[480px] md:w-[650px] lg:w-[210px] xl:w-[250px] 2xl:w-[420px] mx-auto'>
+            <div className='relative w-full rounded-lg h-[150px] xs:h-[170px] sm:h-[250px] lg:h-[200px] xl:h-[200px] mxl:h-[200px] flex items-center bg-white'>
+                <img className='pt-2 h-full mx-auto object-cover rounded-lg' src={pic2} alt="" />
+                <button className='absolute w-full font-poppins h-full bg-black/50 rounded-lg font-bold text-white border-2 sm:text-xl text-lg lg:text-2xl xl:text-3xl hover:scale-105 duration-300 ease-in-out hover:shadow-lg'>NEW ARRIVALS</button>
             </div>
         </div>
         
         {/* Featured */}
-        <div className='w-[320px] md:w-[450px] lg:w-[250px] xl:w-[300px] 2xl:w-[380px] rounded-2xl mx-auto'>
-            <div className='relative w-full rounded-lg h-[250px] flex items-center bg-white'>
-                <img className='pt-2 h-[230px] mx-auto object-cover' src={pic3} alt="" />
-                <button className='absolute w-full font-poppins h-full bg-black/50 rounded-lg font-bold text-white border-2 sm:text-xl text-lg lg:text-2xl xl:text-3xl hover:text-[32px] duration-300 ease-in-out hover:shadow-lg'>FEATURED</button>
+        <div className='w-[330px] xs:w-[370px] sm:w-[550px] ssm:w-[480px] md:w-[650px] lg:w-[220px] xl:w-[300px] 2xl:w-[440px] rounded-2xl mx-auto'>
+            <div className='relative w-full rounded-lg h-[150px] xs:h-[170px] sm:h-[250px] lg:h-[200px] xl:h-[200px] mxl:h-[200px] flex items-center bg-white'>
+                <img className='pt-2 h-full mx-auto object-cover' src={pic3} alt="" />
+                <button className='absolute w-full font-poppins h-full bg-black/50 rounded-lg font-bold text-white border-2 sm:text-xl text-lg lg:text-2xl xl:text-3xl hover:scale-105 duration-300 ease-in-out hover:shadow-lg'>FEATURED</button>
             </div>
         </div>
     </div>
