@@ -19,7 +19,7 @@ const Hero = () => {
             <button className='md:px-6 md:py-3 px-4 py-2 text-xs md:text-[16px] font-poppins rounded-full mt-7 text-white font-semibold bg-red-600 border-white border-2 hover:scale-105 duration-300 hover:shadow-md active:scale-95'>SHOP NOW</button>
           </Link>
         </div>
-        <div className='absolute mt-10 md:mt-0 md:relative md:flex mx-auto items-center opacity-80 md:opacity-100'>
+        <div className='absolute mt-10 md:mt-0 md:relative md:flex mx-auto items-center opacity-50 md:opacity-100'>
           <img className='w-[590px] md:bg-transparent bg-black/30 md:w-[700px] lg:w-[900px] xl:w-[1100px] md:ml-10 md:float-to-right z-10 drop-shadow' src={HeroPic} alt="" />
         </div>
     </div>
