@@ -3,8 +3,8 @@ import React from 'react';
 
 const FilterSection2 = ({ subCategory }) => {
   return (
-    <div className="w-[250px] h-full z-50 mt-4">
-      <div className="w-full h-[50px] border border-red-500 text-red-500 flex justify-between items-center px-4">
+    <div className="w-[80%] h-full z-50 mt-4">
+      <div className="w-[85%] h-[50px] border border-red-500 text-red-500 flex justify-between items-center px-4">
         <h1 className="uppercase font-semibold text-lg font-poppins">Filters</h1>
       </div>
       <div className="my-4 ml-3">
